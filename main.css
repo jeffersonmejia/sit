@@ -17,14 +17,15 @@
 	--black-text-color: #000000;
 
 	--botton-light-color: #0a9396;
-	--seats-bg-color: #ced4da;
+	--botton-black-color: #c4c4c4;
+	--grid-bg-color: #ced4da;
 
 	--main-font: "Roboto", sans-serif;
 	--sec-font: "Poppins", sans-serif;
 
 	--size-titles: 1rem;
 	--size-content: 0.83rem;
-	--size-logo: 1.3rem;
+	--size-logo: 1rem;
 	--default-radious: 1rem;
 }
 
@@ -143,6 +144,8 @@ main .container {
 	width: 90%;
 	margin: auto;
 	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
 
 main .container .seats-container {
@@ -175,7 +178,7 @@ main .container .seats-container .material-icons-outlined {
 .seats-container .seats-subcontainer {
 	width: 80%;
 	height: 100%;
-	background-color: var(--seats-bg-color);
+	background-color: var(--grid-bg-color);
 	border-radius: 1rem;
 	text-align: center;
 	display: flex;
@@ -244,9 +247,111 @@ main .container .seats-container .material-icons-outlined {
 	animation: appear 600ms;
 }
 
+.container .person-container {
+	background-color: var(--grid-bg-color);
+	width: 90%;
+	border-radius: var(--default-radious);
+	margin: auto;
+	display: flex;
+	flex-direction: rows;
+	flex-wrap: wrap;
+	gap: 0.2rem;
+	justify-content: center;
+}
+
+.container .person-container .select-type {
+	text-align: center;
+	font-weight: 300;
+	margin-top: 0.5rem;
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+.container .person-container .person-subcontainer {
+	width: 22%;
+	height: 22%;
+	text-align: center;
+}
+
+.person-subcontainer .type {
+	font-weight: 300;
+	margin-bottom: 0.5rem;
+}
+
+.person-subcontainer .material-icons-outlined,
+.person-subcontainer .material-icons-round {
+	color: var(--primary-color);
+	background-color: var(--botton-black-color);
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 0.8rem;
+}
+
+.destiny-container {
+	background-color: var(--grid-bg-color);
+	width: 90%;
+	border-radius: var(--default-radious);
+	margin: auto;
+	margin-top: 1rem;
+}
+
+.destiny-container .destiny-select {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	text-align: center;
+	font-weight: 300;
+}
+
+.destiny-container .destiny-subcontainer {
+	background-color: var(--primary-color);
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	border-radius: var(--default-radious);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.destiny-subcontainer .destiny-list {
+	color: var(--light-text-color);
+	font-weight: 300;
+	padding-left: 0.65rem;
+	padding-bottom: 0.1rem;
+	padding-top: 0.4rem;
+}
+
+.destiny-subcontainer .destiny-line {
+	width: 0.1px;
+	height: 0.1px;
+	border-left: 11rem solid var(--light-text-color);
+}
+
+.destiny-container .destiny-btn {
+	text-align: center;
+}
+
+.destiny-container .destiny-search {
+	border: none;
+	background-color: var(--botton-light-color);
+	color: var(--light-text-color);
+	width: 80%;
+	height: 2rem;
+	border-radius: var(--default-radious);
+	margin-bottom: 0.5rem;
+}
+
 footer {
 	background-color: var(--primary-color);
 	padding: 1rem;
+	margin-top: 1rem;
 	animation: appear 600ms;
 }
 
