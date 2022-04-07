@@ -29,6 +29,8 @@
 		/>
 
 		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="grid.css">
+		<link rel="stylesheet" href="media.css">
 	</head>
 	<body>
 		<header>
@@ -55,15 +57,26 @@
 			</nav>
 		</header>
 
-		<main>
-			<div class="container">
-				<div class="seats-container">
-					<a href=""><h5 class="new-client">Añadir cliente</h5></a>
+		<main id="main">
+			<div class="container" id="container">
+				<div class="seats-container" id="seats-container">
+					
+					<h5 class="new-travel">Crear viaje</h5>
+					<button>
+						<a href="">
+						<span class="material-icons-outlined">
+							post_add
+						</span>
+					</a>
+					</button>
+					
+					<h5 class="new-client">Añadir cliente</h5>
 					<button>
 						<a href="">
 							<span class="material-icons-outlined"> person_add_alt </span>
 						</a>
 					</button>
+					
 					<div class="seats-subcontainer">
 						<h5 class="select-seat">Seleccionar asiento</h5>
 						<div class="seats-left">
@@ -95,54 +108,76 @@
 						</div>
 					</div>
 				</div>
-				<div class="person-container">
-					<h5 class="select-type">Seleccionar tipo</h5>
-
-					<div class="person-subcontainer">
-						<h5 class="type">Normal</h5>
-						<span class="material-icons-outlined"> emoji_people </span>
+				<div class="subgrid-container">
+					<div class="person-container">
+						<h5 class="select-type">Seleccionar tipo</h5>
+	
+						<div class="person-subcontainer">
+							<h5 class="type">Normal</h5>
+							<span class="material-icons-outlined"> emoji_people </span>
+						</div>
+	
+						<div class="person-subcontainer">
+							<h5 class="type">Infante</h5>
+							<span class="material-icons-outlined"> child_care </span>
+						</div>
+	
+						<div class="person-subcontainer">
+							<h5 class="type">Especial</h5>
+							<span class="material-icons-outlined"> accessible </span>
+						</div>
+	
+						<div class="person-subcontainer">
+							<h5 class="type">Mayor</h5>
+							<span class="material-icons-round"> elderly </span>
+						</div>
 					</div>
-
-					<div class="person-subcontainer">
-						<h5 class="type">Infante</h5>
-						<span class="material-icons-outlined"> child_care </span>
-					</div>
-
-					<div class="person-subcontainer">
-						<h5 class="type">Especial</h5>
-						<span class="material-icons-outlined"> accessible </span>
-					</div>
-
-					<div class="person-subcontainer">
-						<h5 class="type">Mayor</h5>
-						<span class="material-icons-round"> elderly_woman </span>
+					<div class="destiny-container">
+						<h5 class="destiny-select">Seleccionar el destino</h5>
+						<div class="destiny-subcontainer">
+							<h5 class="destiny-list">El Carmen</h5>
+	
+							<hr class="destiny-line"></hr>
+							<h5 class="destiny-list">Flavio Alfaro</h5>
+	
+							<hr class="destiny-line"></hr>
+							<h5 class="destiny-list">Chone</h5>
+	
+							<hr class="destiny-line"></hr>
+							<h5 class="destiny-list">Tosagua</h5>
+						</div>
+						<div class="destiny-btn">
+							<button class="destiny-search">Buscar</button>
+						</div>
 					</div>
 				</div>
-				<div class="destiny-container">
-					<h5 class="destiny-select">Seleccionar el destino</h5>
-					<div class="destiny-subcontainer">
-						<h5 class="destiny-list">El Carmen</h5>
+				<div class="summary-container">
+					<h5 class="summary-text">Resumen</h5>
+					<div class="summary-subcontainer">
+						<div class="summary-list">
+							<h5 class="bus">Ruta: --</h5>
+							<h5 class="bus">Bus: --</h5>
+							<h5 class="bus">Chofer: --</h5>
+							<h5 class="bus lastbus">Salida: --</h5>
+						</div>
+						<hr class="summary-line"></hr>
 
-						<span class="destiny-line"></span>
-						<h5 class="destiny-list">Flavio Alfaro</h5>
-
-						<span class="destiny-line"></span>
-						<h5 class="destiny-list">Chone</h5>
-
-						<span class="destiny-line"></span>
-						<h5 class="destiny-list">Tosagua</h5>
-
-						<span class="destiny-line"></span>
-						<h5 class="destiny-list">Rocafuerte</h5>
-
-						<span class="destiny-line"></span>
-						<h5 class="destiny-list">Portoviejo</h5>
-
-						<span class="destiny-line"></span>
-						<h5 class="destiny-list">Manta</h5>
-					</div>
-					<div class="destiny-btn">
-						<button class="destiny-search">Buscar</button>
+						<div class="summary-list">
+							<h5 class="client">Cliente: --</h5>
+							<h5 class="client">CI/RUC: --</h5>
+							<h5 class="client">Teléfono: --</h5>
+							<h5 class="client">Dirección: --</h5>
+							<h5 class="client lastclient">Destino: --</h5>
+						</div>
+						<hr class="summary-line"></hr>
+						<div class="summary-list">
+							<h5 class="total-info">Asiento: --</h5>
+							<h5 class="total-info">Personas: --</h5>
+							<h5 class="total-info last-total-info">Total: --</h5>
+							<div class="print-btn">
+								<button class="print-botton">Imprimir</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -151,5 +186,6 @@
 		<footer>
 			<h5>© 2022 Jefferson, Inc</h5>
 		</footer>
+		<script src="./app.js"></script>
 	</body>
 </html>

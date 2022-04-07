@@ -1,0 +1,291 @@
+/* WORKING WITH 325PX BASE */
+main {
+	background-color: var(--main-bg-color);
+	animation: appear 600ms;
+}
+
+main a {
+	text-decoration: none;
+}
+
+main .container {
+	background-color: var(--container-color);
+	width: 90%;
+	margin: auto;
+	display: grid;
+	grid-template-rows: 30% 30% 30% 30%;
+}
+
+main .container .seats-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	margin-bottom: 1rem;
+}
+
+main .container .seats-container .new-client,
+main .container .seats-container .new-travel {
+	color: var(--hover-light-color);
+	font-weight: 300;
+	margin-top: 1.2rem;
+	animation: appear 600ms;
+}
+
+main .container .seats-container button {
+	border: none;
+	background-color: transparent;
+	margin-bottom: 1.2rem;
+}
+
+main .container .seats-container .material-icons-outlined {
+	color: var(--botton-light-color);
+	animation: appear 600ms;
+}
+
+.seats-container .seats-subcontainer {
+	min-width: 14.7rem;
+	max-width: min-content;
+	width: 100%;
+	height: 100%;
+	background-color: var(--grid-bg-color);
+	border-radius: 1rem;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: auto;
+	padding-bottom: 1rem;
+	animation: appear 600ms;
+}
+
+.seats-container .seats-subcontainer .select-seat {
+	width: 100%;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	font-weight: 300;
+}
+
+.seats-subcontainer .seats-left {
+	width: 45%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.seats-subcontainer .seats-left .left-side {
+	width: 2rem;
+	height: 2rem;
+	background-color: var(--primary-color);
+	color: var(--light-text-color);
+	border-radius: 50%;
+	font-size: var(--size-content);
+	text-align: center;
+	padding-top: 0.5rem;
+	border: none;
+	animation: appear 600ms;
+}
+
+.seats-subcontainer .seats-left .left-side:hover,
+.seats-subcontainer .seats-right .right-side:hover {
+	background-color: var(--botton-selected);
+	cursor: pointer;
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+.seats-subcontainer .seats-middle {
+	width: 0.1px;
+	height: 100%;
+	margin: auto;
+	border-top: 15rem solid var(--primary-color);
+	height: 0.1rem;
+	animation: appear 600ms;
+}
+
+.seats-subcontainer .seats-right {
+	width: 45%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.seats-subcontainer .seats-right .right-side {
+	width: 2rem;
+	height: 2rem;
+	background-color: var(--primary-color);
+	border-radius: 50%;
+	color: var(--light-text-color);
+	font-size: var(--size-content);
+	text-align: center;
+	padding-top: 0.5rem;
+	animation: appear 600ms;
+}
+
+.container .person-container {
+	background-color: var(--grid-bg-color);
+	min-width: 15.84rem;
+	max-width: min-content;
+	width: 100%;
+	border-radius: var(--default-radious);
+	margin: auto;
+	display: flex;
+	flex-direction: rows;
+	flex-wrap: wrap;
+	gap: 0.2rem;
+	justify-content: center;
+}
+
+.container .person-container .select-type {
+	text-align: center;
+	font-weight: 300;
+	margin-top: 0.5rem;
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+.container .person-container .person-subcontainer {
+	width: 22%;
+	height: 22%;
+	text-align: center;
+}
+
+.person-subcontainer .type {
+	font-weight: 300;
+	margin-bottom: 0.5rem;
+}
+
+.person-subcontainer .material-icons-outlined,
+.person-subcontainer .material-icons-round {
+	color: var(--primary-color);
+	background-color: var(--botton-black-color);
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 0.8rem;
+}
+
+.destiny-container {
+	background-color: var(--grid-bg-color);
+	min-width: 15.84rem;
+	max-width: min-content;
+	width: 100%;
+	border-radius: var(--default-radious);
+	margin: auto;
+	margin-top: 1rem;
+	animation: appear 600ms;
+}
+
+.destiny-container .destiny-select {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	text-align: center;
+	font-weight: 300;
+}
+
+.destiny-container .destiny-subcontainer {
+	background-color: var(--primary-color);
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	border-radius: var(--default-radious);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
+	overflow-y: auto;
+	animation: appear 600ms;
+}
+
+.destiny-subcontainer .destiny-list {
+	color: var(--light-text-color);
+	font-weight: 300;
+	padding-left: 0.65rem;
+	padding-bottom: 0.1rem;
+	padding-top: 0.4rem;
+}
+
+.destiny-subcontainer .destiny-line {
+	border: none;
+	width: 90%;
+	border: 0.1px solid var(--light-text-color);
+}
+
+.destiny-container .destiny-btn {
+	text-align: center;
+}
+
+.destiny-container .destiny-search {
+	border: none;
+	background-color: var(--botton-light-color);
+	color: var(--light-text-color);
+	width: 80%;
+	height: 2rem;
+	border-radius: var(--default-radious);
+	margin-bottom: 0.5rem;
+	animation: appear 600ms;
+}
+
+.container .summary-container {
+	min-width: 15.84rem;
+	max-width: min-content;
+	width: 100%;
+	margin: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-radius: var(--default-radious);
+	background-color: var(--grid-bg-color);
+}
+
+.container .summary-container .summary-text {
+	text-align: center;
+	font-weight: 300;
+	padding-top: 0.5rem;
+}
+
+.container .summary-container .summary-subcontainer {
+	width: 80%;
+	padding-top: 0.5rem;
+	margin: auto;
+}
+
+.summary-subcontainer .summary-list {
+	margin-bottom: 0.5rem;
+}
+
+.summary-subcontainer .summary-list .bus,
+.summary-subcontainer .summary-list .client,
+.summary-subcontainer .summary-list .total-info {
+	font-weight: 300;
+	padding-top: 0.2rem;
+}
+
+.container .summary-container .summary-subcontainer .summary-line {
+	border: none;
+	border: 0.1px solid var(--primary-color);
+}
+
+.print-btn {
+	text-align: center;
+	margin-top: 0.5rem;
+}
+
+.print-btn .print-botton {
+	border: none;
+	background-color: var(--botton-light-color);
+	color: var(--light-text-color);
+	width: 100%;
+	height: 2rem;
+	border-radius: var(--default-radious);
+	margin-bottom: 0.5rem;
+	animation: appear 600ms;
+}
