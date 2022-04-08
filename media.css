@@ -119,6 +119,7 @@
 		width: 90%;
 		grid-template-columns: 33% 33% 33%;
 		grid-template-rows: 15% 15% 25%;
+		margin-bottom: 2rem;
 	}
 
 	.container .seats-container {

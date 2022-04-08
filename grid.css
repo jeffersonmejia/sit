@@ -1,7 +1,6 @@
 /* WORKING WITH 325PX BASE */
 main {
 	background-color: var(--main-bg-color);
-	animation: appear 600ms;
 }
 
 main a {
@@ -29,17 +28,6 @@ main .container .seats-container .new-travel {
 	color: var(--hover-light-color);
 	font-weight: 300;
 	margin-top: 1.2rem;
-	animation: appear 600ms;
-}
-
-main .container .seats-container .material-icons-outlined:hover {
-	animation: status 600ms;
-}
-
-@keyframes status {
-	0% {
-		color: var(--botton-selected);
-	}
 }
 
 main .container .seats-container button {
@@ -50,7 +38,6 @@ main .container .seats-container button {
 
 main .container .seats-container .material-icons-outlined {
 	color: var(--botton-light-color);
-	animation: appear 600ms;
 }
 
 .seats-container .seats-subcontainer {
@@ -66,7 +53,6 @@ main .container .seats-container .material-icons-outlined {
 	flex-wrap: wrap;
 	margin: auto;
 	padding-bottom: 1rem;
-	animation: appear 600ms;
 }
 
 .seats-container .seats-subcontainer .select-seat {
@@ -95,15 +81,7 @@ main .container .seats-container .material-icons-outlined {
 	text-align: center;
 	padding-top: 0.5rem;
 	border: none;
-	animation: appear 600ms;
-}
-
-.seats-subcontainer .seats-left .left-side:hover,
-.seats-subcontainer .seats-right .right-side:hover {
-	background-color: var(--botton-selected);
 	cursor: pointer;
-	width: 2.5rem;
-	height: 2.5rem;
 }
 
 .seats-subcontainer .seats-middle {
@@ -112,7 +90,6 @@ main .container .seats-container .material-icons-outlined {
 	margin: auto;
 	border-top: 15rem solid var(--primary-color);
 	height: 0.1rem;
-	animation: appear 600ms;
 }
 
 .seats-subcontainer .seats-right {
@@ -133,7 +110,7 @@ main .container .seats-container .material-icons-outlined {
 	font-size: var(--size-content);
 	text-align: center;
 	padding-top: 0.5rem;
-	animation: appear 600ms;
+	cursor: pointer;
 }
 
 .container .person-container {
@@ -153,11 +130,6 @@ main .container .seats-container .material-icons-outlined {
 .container .person-container .material-icons-outlined,
 .container .person-container .material-icons-round {
 	cursor: pointer;
-}
-
-.container .person-container .material-icons-outlined:hover,
-.container .person-container .material-icons-round:hover {
-	animation: status 600ms;
 }
 
 .container .person-container .select-type {
@@ -200,7 +172,6 @@ main .container .seats-container .material-icons-outlined {
 	border-radius: var(--default-radious);
 	margin: auto;
 	margin-top: 1rem;
-	animation: appear 600ms;
 }
 
 .destiny-container .destiny-select {
@@ -223,7 +194,6 @@ main .container .seats-container .material-icons-outlined {
 	padding-bottom: 0.5rem;
 	margin-bottom: 0.5rem;
 	overflow-y: auto;
-	animation: appear 600ms;
 }
 
 .destiny-subcontainer .destiny-list {
@@ -233,10 +203,6 @@ main .container .seats-container .material-icons-outlined {
 	padding-bottom: 0.1rem;
 	padding-top: 0.4rem;
 	cursor: pointer;
-}
-
-.destiny-subcontainer .destiny-list:hover {
-	color: var(--botton-selected);
 }
 
 .destiny-subcontainer .destiny-line {
@@ -258,7 +224,6 @@ main .container .seats-container .material-icons-outlined {
 	border-radius: var(--default-radious);
 	margin-bottom: 0.5rem;
 	cursor: pointer;
-	animation: appear 600ms;
 }
 
 .container .summary-container {
@@ -314,5 +279,4 @@ main .container .seats-container .material-icons-outlined {
 	border-radius: var(--default-radious);
 	margin-bottom: 0.5rem;
 	cursor: pointer;
-	animation: appear 600ms;
 }

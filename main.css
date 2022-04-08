@@ -20,6 +20,7 @@
 	--botton-black-color: #c4c4c4;
 	--botton-selected: #70e000;
 	--botton-active: #03045e;
+	--botton-selected-light: #dee2e6;
 	--grid-bg-color: #ced4da;
 
 	--main-font: "Roboto", sans-serif;
@@ -48,14 +49,6 @@ body::-webkit-scrollbar-track {
 	background-color: var(--light-text-color);
 }
 
-@keyframes appear {
-	0% {
-		background-color: var(--light-text-color);
-		color: var(--light-text-color);
-		border: none;
-	}
-}
-
 body {
 	font-family: "Roboto", sans-serif;
 }
@@ -66,20 +59,11 @@ nav {
 	color: var(--light-text-color);
 	display: flex;
 	flex-direction: row;
-	animation: appear 600ms;
 }
 
 nav button a {
 	color: var(--light-text-color);
 	text-decoration: none;
-}
-
-nav button a:hover {
-	color: var(--hover-light-color);
-}
-
-nav button a:active {
-	color: var(--active-light-color);
 }
 
 nav .inf-nav-container {
@@ -137,7 +121,6 @@ footer {
 	padding-top: 1rem;
 	padding-bottom: 0.5rem;
 	border: none;
-	animation: appear 600ms;
 }
 
 footer h5 {
