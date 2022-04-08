@@ -15,6 +15,7 @@
 	--active-light-color: #ced4da;
 	--light-text-color: #fff;
 	--black-text-color: #000000;
+	--important: rgb(255, 0, 0);
 
 	--botton-light-color: #0a9396;
 	--botton-black-color: #c4c4c4;
@@ -22,6 +23,8 @@
 	--botton-active: #03045e;
 	--botton-selected-light: #dee2e6;
 	--grid-bg-color: #ced4da;
+	--opacity-color: rgba(0, 0, 0, 0.5);
+	--placeholder-color: #6c757d;
 
 	--main-font: "Roboto", sans-serif;
 	--sec-font: "Poppins", sans-serif;
