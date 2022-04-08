@@ -32,6 +32,16 @@ main .container .seats-container .new-travel {
 	animation: appear 600ms;
 }
 
+main .container .seats-container .material-icons-outlined:hover {
+	animation: status 600ms;
+}
+
+@keyframes status {
+	0% {
+		color: var(--botton-selected);
+	}
+}
+
 main .container .seats-container button {
 	border: none;
 	background-color: transparent;
@@ -140,6 +150,16 @@ main .container .seats-container .material-icons-outlined {
 	justify-content: center;
 }
 
+.container .person-container .material-icons-outlined,
+.container .person-container .material-icons-round {
+	cursor: pointer;
+}
+
+.container .person-container .material-icons-outlined:hover,
+.container .person-container .material-icons-round:hover {
+	animation: status 600ms;
+}
+
 .container .person-container .select-type {
 	text-align: center;
 	font-weight: 300;
@@ -212,6 +232,11 @@ main .container .seats-container .material-icons-outlined {
 	padding-left: 0.65rem;
 	padding-bottom: 0.1rem;
 	padding-top: 0.4rem;
+	cursor: pointer;
+}
+
+.destiny-subcontainer .destiny-list:hover {
+	color: var(--botton-selected);
 }
 
 .destiny-subcontainer .destiny-line {
@@ -232,6 +257,7 @@ main .container .seats-container .material-icons-outlined {
 	height: 2rem;
 	border-radius: var(--default-radious);
 	margin-bottom: 0.5rem;
+	cursor: pointer;
 	animation: appear 600ms;
 }
 
@@ -287,5 +313,6 @@ main .container .seats-container .material-icons-outlined {
 	height: 2rem;
 	border-radius: var(--default-radious);
 	margin-bottom: 0.5rem;
+	cursor: pointer;
 	animation: appear 600ms;
 }

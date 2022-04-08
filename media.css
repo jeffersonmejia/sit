@@ -125,6 +125,33 @@
 		grid-row: 1/2;
 	}
 
+	.container .seats-subcontainer {
+		height: 100%;
+		min-width: 11.7rem;
+		max-width: min-content;
+		width: 100%;
+	}
+
+	main .container .seats-container .new-client,
+	main .container .seats-container .new-travel {
+		margin-top: 0.5rem;
+	}
+
+	main .container .seats-container .new-travel {
+		margin-top: 3.2rem;
+	}
+
+	.container .seats-container .seats-subcontainer .select-seat {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+	.container .seats-container .seats-subcontainer .seats-left,
+	.container .seats-container .seats-subcontainer .seats-right {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	.container .subgrid-container {
 		display: grid;
 		grid-template-rows: 40% 40%;
@@ -133,5 +160,9 @@
 	.container .summary-container {
 		grid-column: 3/4;
 		grid-row: 1/2;
+	}
+
+	.container .summary-container {
+		height: 69%;
 	}
 }
