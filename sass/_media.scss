@@ -1,5 +1,5 @@
 // Compatibilidad
-@media screen and (min-width: 0px) and (max-width: 374px) {
+@media only screen and (min-width: 0px) and (max-width: 374px) {
 	.container {
 		.mode-box span {
 			display: none;
@@ -29,7 +29,23 @@
 	}
 }
 
-@media screen and (min-height: 1024px) {
+@media only screen and (min-height: 555px) {
+	html {
+		main {
+			.container {
+				.right {
+					form {
+						margin-top: 0;
+						min-height: 26.8rem;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-height: 1024px) {
 	html {
 		main {
 			.container {
@@ -56,7 +72,7 @@
 	}
 }
 
-@media screen and (min-width: 1366px) {
+@media only screen and (min-width: 1366px) {
 	html {
 		main {
 			width: 100%;
