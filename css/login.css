@@ -110,7 +110,7 @@ footer {
   min-height: 40px;
   max-height: 60px;
   height: 2rem;
-  margin-top: 1rem;
+  margin-top: 15%;
   padding-top: 1rem;
 }
 footer h5 {
@@ -120,11 +120,19 @@ footer h5 {
   margin: 0;
 }
 
+@media only screen and (min-height: 736px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+}
 @media only screen and (min-height: 1024px) {
   html main .container .left {
-    width: 40%;
+    width: 20%;
     visibility: visible;
     margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     background-color: transparent;
   }
   html main .container .left .traveler {
@@ -132,10 +140,19 @@ footer h5 {
     visibility: visible;
   }
   html main .container .right .office-man {
-    margin-top: 1.5rem;
     visibility: visible;
-    width: 40%;
+    width: 20%;
     height: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+}
+@media only screen and (min-height: 1180px) {
+  html main .container .left {
+    width: 35%;
+  }
+  html main .container .right .office-man {
+    width: 35%;
   }
 }
 @media only screen and (min-width: 1366px) {
@@ -190,6 +207,10 @@ footer h5 {
     height: 2rem;
     margin: 0;
     margin-top: 1rem;
+  }
+  html footer {
+    position: absolute;
+    bottom: 0;
   }
 }
 
