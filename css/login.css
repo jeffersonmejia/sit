@@ -1,5 +1,5 @@
 html {
-  height: 100%;
+  height: 100;
   background-color: #ececec;
 }
 html main {
@@ -31,6 +31,13 @@ html main .container .left {
 html main .container .left .traveler {
   width: 0%;
   visibility: hidden;
+}
+html main .container .right {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 html main .container .right .office-man {
   width: 0%;
