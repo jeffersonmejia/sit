@@ -6,18 +6,62 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<title>Document</title>
-		<link rel="stylesheet" href="./main.css" />
+		<title>SIT - Ingreso</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Material+Icons"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone"
+		/>
+		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="./css/login.css" />
 	</head>
 	<body>
-		<header>
-			<nav><!-- aqui estoy --></nav>
-		</header>
+		<main>
+			<div class="container">
+				<div class="mode-box">
+					<span class="material-icons-outlined dark-mode"> light_mode </span>
+				</div>
+				<div class="left">
+					<img src="./img/travelers.svg" alt="Sorry, no avaliable" class="traveler" />
+				</div>
+				<div class="right">
+					<form action="">
+						<div class="box-account">
+							<span class="material-icons-outlined account"> account_circle </span>
+						</div>
+						<h1 class="welcome-text">Bienvenido</h1>
 
-		<main></main>
+						<label for="user"> Usuario </label>
+						<input type="text" placeholder="Ingrese su usuario" />
+						<h5>¿Olvidaste tu usuario?</h5>
+
+						<label for="psw"> Contraseña </label>
+						<input type="password" class="pwd" placeholder="Ingrese su contraseña" />
+						<h5>¿Olvidaste tu contraseña?</h5>
+						<input type="submit" value="Ingresar" />
+					</form>
+					<img src="./img/office-man.svg" class="office-man" alt="" />
+				</div>
+			</div>
+		</main>
 
 		<footer>
 			<h5>© 2022 Jefferson, Inc</h5>
+			<h4></h4>
 		</footer>
 	</body>
 </html>

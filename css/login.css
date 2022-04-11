@@ -1,0 +1,212 @@
+html {
+  height: 100%;
+  background-color: #ececec;
+}
+html main {
+  font-family: "Roboto", sans-serif;
+}
+html main .container {
+  background-color: #ececec;
+}
+html main .container .mode-box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+html main .container .mode-box .dark-mode {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: #9b2226;
+}
+html main .container .mode-box .dark-mode:hover {
+  color: #001219;
+}
+html main .container .left {
+  background-color: #fff;
+  width: 0%;
+  visibility: hidden;
+}
+html main .container .left .traveler {
+  width: 0%;
+  visibility: hidden;
+}
+html main .container .right .office-man {
+  width: 0%;
+  visibility: hidden;
+}
+html main .container .right form {
+  width: 18rem;
+  min-height: 28rem;
+  height: 100%;
+  margin-top: 3rem;
+  border: 1px solid #000;
+  border-radius: 3px;
+  background-color: #fff;
+}
+html main .container .right form .box-account {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: row-reverse;
+  position: relative;
+  justify-content: center;
+}
+html main .container .right form .box-account .account {
+  font-size: 4rem;
+  color: #9b2226;
+  cursor: default;
+}
+html main .container .right form .welcome-text {
+  text-align: center;
+  padding-top: 0.5rem;
+  cursor: default;
+  color: #9b2226;
+}
+html main .container .right form label {
+  margin-left: 1rem;
+  color: #9b2226;
+}
+html main .container .right form input {
+  margin-left: 1rem;
+  width: 85%;
+  border: none;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding-top: 0.5rem;
+  padding-left: 0.65rem;
+  padding-bottom: 0.5rem;
+}
+html main .container .right form h5 {
+  text-align: right;
+  padding-right: 1.3rem;
+  color: #9b2226;
+  cursor: pointer;
+  margin-bottom: 0.7rem;
+}
+html main .container .right form h5:hover {
+  color: #001219;
+}
+html main .container .right form input[type=submit] {
+  background-color: #9b2226;
+  color: #fff;
+  border: none;
+  width: 90%;
+  cursor: pointer;
+}
+html main .container .right form input[type=submit]:hover {
+  background-color: #001219;
+}
+
+footer {
+  background-color: #9b2226;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+footer h5 {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (min-width: 0px) and (max-width: 374px) {
+  .container .mode-box span {
+    display: none;
+  }
+  .container .right form {
+    display: none;
+  }
+
+  footer {
+    top: 0;
+    background-color: #ececec;
+  }
+  footer h5 {
+    display: none;
+  }
+  footer h4 {
+    padding-top: 15rem;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #ff0000;
+  }
+  footer h4:after {
+    content: "Lo sentimos, tu dispositivo no es compatible.";
+  }
+}
+@media screen and (min-height: 1024px) {
+  html main .container .left {
+    width: 40%;
+    visibility: visible;
+    margin: auto;
+    background-color: transparent;
+  }
+  html main .container .left .traveler {
+    width: 100%;
+    visibility: visible;
+  }
+  html main .container .right .office-man {
+    margin-top: 1.5rem;
+    visibility: visible;
+    width: 40%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1366px) {
+  html main {
+    width: 100%;
+  }
+  html main .container {
+    width: 100%;
+    margin: auto;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 70% 30%;
+  }
+  html main .container .mode-box {
+    grid-row: 1/2;
+    width: 100%;
+    grid-column: 2/3;
+  }
+  html main .container .mode-box .dark-mode {
+    margin: 0;
+    padding-right: 0.7rem;
+  }
+  html main .container .left {
+    width: initial;
+    visibility: visible;
+    background-color: transparent;
+    grid-row: 2/3;
+    margin: auto;
+    display: flex;
+  }
+  html main .container .left .traveler {
+    width: 50%;
+    padding-left: 2rem;
+    padding: auto;
+    margin: auto;
+    text-align: center;
+    visibility: visible;
+  }
+  html main .container .right {
+    margin: 0;
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  html main .container .right .office-man {
+    margin: 0;
+    visibility: hidden;
+    width: 0%;
+    height: 0%;
+  }
+  html main .container .right form {
+    height: 2rem;
+    margin: 0;
+    margin-top: 1rem;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

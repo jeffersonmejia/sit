@@ -1,0 +1,12 @@
+footer {
+	background-color: $color-primary;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	h5 {
+		font-family: "Roboto", sans-serif;
+		text-align: center;
+		color: $color-black;
+	}
+}

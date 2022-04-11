@@ -1,0 +1,106 @@
+@mixin setColor {
+	color: $color-primary;
+}
+
+html {
+	height: 100%;
+	background-color: $main-box-color;
+	main {
+		font-family: "Roboto", sans-serif;
+		.container {
+			background-color: $main-box-color;
+			.mode-box {
+				position: relative;
+				width: 100%;
+				display: flex;
+				flex-direction: row-reverse;
+				.dark-mode {
+					margin-right: 1rem;
+					margin-top: 1rem;
+					cursor: pointer;
+					color: $color-primary;
+				}
+				.dark-mode:hover {
+					color: $hover-text;
+				}
+			}
+			.left {
+				background-color: $main-bg-color;
+				width: 0%;
+				visibility: hidden;
+				.traveler {
+					width: 0%;
+					visibility: hidden;
+				}
+			}
+			.right {
+				.office-man {
+					width: 0%;
+					visibility: hidden;
+				}
+				form {
+					width: 18rem;
+					// width: 100%;
+					min-height: 28rem;
+					height: 100%;
+					margin-top: 3rem;
+					border: 1px solid $color-border;
+					border-radius: $radius-default;
+					background-color: $sec-box;
+					.box-account {
+						display: flex;
+						margin-top: 1rem;
+						flex-direction: row-reverse;
+						position: relative;
+						justify-content: center;
+						.account {
+							font-size: 4rem;
+							color: $color-primary;
+							cursor: default;
+						}
+					}
+					.welcome-text {
+						text-align: center;
+						padding-top: 0.5rem;
+						cursor: default;
+						@include setColor;
+					}
+					label {
+						margin-left: 1rem;
+						color: $color-primary;
+					}
+					input {
+						margin-left: 1rem;
+						width: 85%;
+						border: none;
+						border: 1px solid $color-border;
+						border-radius: $radius-default;
+						padding-top: $padd-top-input;
+						padding-left: $padd-left-input;
+						padding-bottom: $padd-bottom-input;
+					}
+					h5 {
+						text-align: right;
+						padding-right: 1.3rem;
+						color: $color-primary;
+						cursor: pointer;
+						margin-bottom: 0.7rem;
+					}
+					h5:hover {
+						color: $hover-text;
+					}
+					input[type="submit"] {
+						background-color: $color-primary;
+						color: $color-black;
+						border: none;
+						width: 90%;
+						cursor: pointer;
+					}
+					input[type="submit"]:hover {
+						background-color: $hover-text;
+					}
+				}
+			}
+		}
+	}
+}

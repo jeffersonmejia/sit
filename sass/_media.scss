@@ -1,0 +1,116 @@
+// Compatibilidad
+@media screen and (min-width: 0px) and (max-width: 374px) {
+	.container {
+		.mode-box span {
+			display: none;
+		}
+		.right {
+			form {
+				display: none;
+			}
+		}
+	}
+	footer {
+		top: 0;
+		background-color: $main-box-color;
+		h5 {
+			display: none;
+		}
+		h4 {
+			padding-top: 15rem;
+			text-align: center;
+			font-family: "Roboto", sans-serif;
+			font-weight: 400;
+			color: $alert;
+		}
+		h4:after {
+			content: "Lo sentimos, tu dispositivo no es compatible.";
+		}
+	}
+}
+
+@media screen and (min-height: 1024px) {
+	html {
+		main {
+			.container {
+				.left {
+					width: 40%;
+					visibility: visible;
+					margin: auto;
+					background-color: transparent;
+					.traveler {
+						width: 100%;
+						visibility: visible;
+					}
+				}
+				.right {
+					.office-man {
+						margin-top: 1.5rem;
+						visibility: visible;
+						width: 40%;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	html {
+		main {
+			width: 100%;
+			.container {
+				width: 100%;
+				margin: auto;
+				margin-top: 1rem;
+
+				display: grid;
+				grid-template-rows: 10% 90%;
+				grid-template-columns: 70% 30%;
+				.mode-box {
+					grid-row: 1/2;
+					width: 100%;
+					grid-column: 2/3;
+					.dark-mode {
+						margin: 0;
+						padding-right: 0.7rem;
+					}
+				}
+				.left {
+					width: initial;
+					visibility: visible;
+					background-color: transparent;
+					grid-row: 2/3;
+					margin: auto;
+					display: flex;
+					.traveler {
+						width: 50%;
+						padding-left: 2rem;
+						padding: auto;
+						margin: auto;
+						text-align: center;
+						visibility: visible;
+					}
+				}
+				.right {
+					margin: 0;
+					grid-row: 2/3;
+					grid-column: 2/3;
+					.office-man {
+						margin: 0;
+						visibility: hidden;
+						width: 0%;
+						height: 0%;
+					}
+					form {
+						height: 2rem;
+						margin: 0;
+						margin-top: 1rem;
+						// margin-left: 22rem;
+					}
+				}
+			}
+		}
+	}
+}
