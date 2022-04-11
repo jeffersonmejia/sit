@@ -47,7 +47,6 @@ html main .container .right form {
   width: 18rem;
   min-height: 28rem;
   height: 100%;
-  margin-top: 3rem;
   border: 1px solid #000;
   border-radius: 3px;
   background-color: #fff;
@@ -107,49 +106,20 @@ html main .container .right form input[type=submit]:hover {
 
 footer {
   background-color: #9b2226;
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  min-height: 40px;
+  max-height: 60px;
+  height: 2rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
 footer h5 {
   font-family: "Roboto", sans-serif;
   text-align: center;
   color: #fff;
+  margin: 0;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 374px) {
-  .container .mode-box span {
-    display: none;
-  }
-  .container .right form {
-    display: none;
-  }
-
-  footer {
-    top: 0;
-    background-color: #ececec;
-  }
-  footer h5 {
-    display: none;
-  }
-  footer h4 {
-    padding-top: 15rem;
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    color: #ff0000;
-  }
-  footer h4:after {
-    content: "Lo sentimos, tu dispositivo no es compatible.";
-  }
-}
-@media only screen and (min-height: 555px) {
-  html main .container .right form {
-    margin-top: 0;
-    min-height: 26.8rem;
-    height: 100%;
-  }
-}
 @media only screen and (min-height: 1024px) {
   html main .container .left {
     width: 40%;
