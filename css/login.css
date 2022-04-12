@@ -116,10 +116,55 @@ footer {
 footer h5 {
   font-family: "Roboto", sans-serif;
   text-align: center;
+  font-weight: 400;
   color: #fff;
   margin: 0;
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #202124;
+  }
+  html body {
+    background-color: #202124;
+  }
+  html body main .container {
+    background-color: #202124;
+  }
+  html body main .container .mode-box .dark-mode {
+    color: #ff8300;
+  }
+  html body main .container .mode-box .dark-mode:hover {
+    color: #023e8a;
+  }
+  html body main .container .right form {
+    background-color: #0a9396;
+  }
+  html body main .container .right form .box-account .account {
+    color: #fff;
+  }
+  html body main .container .right form .welcome-text {
+    color: #fff;
+  }
+  html body main .container .right form label {
+    color: #fff;
+  }
+  html body main .container .right form h5 {
+    color: #fff;
+  }
+  html body main .container .right form h5:hover {
+    color: #e9d8a6;
+  }
+  html body main .container .right form input[type=submit] {
+    background-color: #ff8300;
+  }
+  html body main .container .right form input[type=submit]:hover {
+    background-color: #023e8a;
+  }
+  html body footer {
+    background-color: #0a9396;
+  }
+}
 @media only screen and (min-height: 736px) {
   footer {
     position: fixed;
