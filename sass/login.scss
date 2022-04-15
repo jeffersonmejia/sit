@@ -1,0 +1,129 @@
+@import "variables";
+
+body {
+	overflow-x: hidden;
+}
+
+main {
+	background-color: $main-bg;
+	.vector-box {
+		width: 0px;
+		img {
+			width: 0px;
+			visibility: hidden;
+		}
+	}
+	.form-box {
+		width: 100%;
+		height: 85vh;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		form {
+			width: 90%;
+			height: 415px;
+			align-self: center;
+			background-color: $main-bg;
+			font-family: "Raleway", sans-serif;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 1px 1px 5px gray;
+			display: flex;
+			flex-direction: column;
+			.icon-box {
+				width: 100%;
+				margin-top: 10px;
+				text-align: center;
+				span {
+					font-size: 50px;
+					color: $primary;
+				}
+				h1 {
+					margin: 0;
+					color: $primary;
+					word-wrap: break-word;
+					font-size: $h1;
+				}
+			}
+			label {
+				padding-left: 10px;
+				font-size: $normal;
+				font-weight: $bold;
+			}
+			.usr {
+				color: $content;
+				margin-top: 30px;
+				word-wrap: break-word;
+			}
+
+			.psw {
+				margin-top: 30px;
+				word-wrap: break-word;
+			}
+
+			.usr-in,
+			.psw-in {
+				width: 85%;
+				height: 2.3rem;
+				font-size: $normal;
+				padding-left: 5px;
+				margin-top: 5px;
+				margin-left: 15px;
+
+				border: none;
+				border: 1.5px solid $pholder;
+				border-radius: 5px;
+			}
+
+			.psw-in {
+				margin-bottom: 10px;
+			}
+			.submit-btn {
+				width: 87.9%;
+				height: 2.3rem;
+
+				padding: 0;
+				margin-top: 5px;
+				margin-bottom: 15px;
+				margin-left: 15px;
+				border: none;
+				padding-left: 5px;
+				border-radius: 5px;
+
+				background-color: $secondary;
+				color: $main-bg;
+				cursor: pointer;
+
+				font-size: $normal;
+				font-weight: $bold;
+			}
+		}
+	}
+}
+
+@import "footer";
+// FOR BUGS
+@media only screen and (max-height: 515px) {
+	body {
+		display: none;
+	}
+}
+// Footer fixed
+@media only screen and (max-height: 540px) {
+	footer {
+		margin: 0;
+		bottom: 0;
+		padding: 0;
+		position: relative;
+	}
+}
+@media only screen and (min-width: 334px) {
+	main {
+		.form-box {
+			margin: auto;
+			form {
+				max-width: 300px;
+			}
+		}
+	}
+}

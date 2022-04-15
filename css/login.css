@@ -1,261 +1,131 @@
-html {
-  width: 100vw;
-  background-color: #ececec;
+body {
+  overflow-x: hidden;
 }
-html main {
-  font-family: "Roboto", sans-serif;
+
+main {
+  background-color: #ffffff;
 }
-html main .container {
-  background-color: #ececec;
+main .vector-box {
+  width: 0px;
 }
-html main .container .mode-box {
-  position: relative;
+main .vector-box img {
+  width: 0px;
+  visibility: hidden;
+}
+main .form-box {
   width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-}
-html main .container .mode-box .dark-mode {
-  margin-right: 1rem;
-  margin-top: 1rem;
-  cursor: pointer;
-  color: #9b2226;
-}
-html main .container .mode-box .dark-mode:hover {
-  color: #001219;
-}
-html main .container .left {
-  background-color: #fff;
-  width: 0%;
-  visibility: hidden;
-}
-html main .container .left .traveler {
-  width: 0%;
-  visibility: hidden;
-}
-html main .container .right {
-  width: 90%;
-  margin: auto;
+  height: 85vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: auto;
 }
-html main .container .right .office-man {
-  width: 0%;
-  visibility: hidden;
-}
-html main .container .right form {
-  width: 18rem;
-  min-height: 28rem;
-  height: 100%;
-  border: 1px solid #000;
-  border-radius: 3px;
-  background-color: #fff;
-}
-html main .container .right form .box-account {
-  display: flex;
-  margin-top: 1rem;
-  flex-direction: row-reverse;
-  position: relative;
-  justify-content: center;
-}
-html main .container .right form .box-account .account {
-  font-size: 4rem;
-  color: #9b2226;
-  cursor: default;
-}
-html main .container .right form .welcome-text {
-  text-align: center;
-  padding-top: 0.5rem;
-  cursor: default;
-  color: #9b2226;
-}
-html main .container .right form label {
-  margin-left: 1rem;
-  color: #9b2226;
-}
-html main .container .right form input {
-  margin-left: 1rem;
-  width: 85%;
-  border: none;
-  border: 1px solid #000;
-  border-radius: 3px;
-  padding-top: 0.5rem;
-  padding-left: 0.65rem;
-  padding-bottom: 0.5rem;
-}
-html main .container .right form h5 {
-  text-align: right;
-  padding-right: 1.3rem;
-  color: #9b2226;
-  cursor: pointer;
-  margin-bottom: 0.7rem;
-}
-html main .container .right form h5:hover {
-  color: #001219;
-}
-html main .container .right form input[type=submit] {
-  background-color: #9b2226;
-  color: #fff;
-  border: none;
+main .form-box form {
   width: 90%;
-  cursor: pointer;
+  height: 415px;
+  align-self: center;
+  background-color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px gray;
+  display: flex;
+  flex-direction: column;
 }
-html main .container .right form input[type=submit]:hover {
-  background-color: #001219;
+main .form-box form .icon-box {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+main .form-box form .icon-box span {
+  font-size: 50px;
+  color: #ff0a54;
+}
+main .form-box form .icon-box h1 {
+  margin: 0;
+  color: #ff0a54;
+  word-wrap: break-word;
+  font-size: 32px;
+}
+main .form-box form label {
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+main .form-box form .usr {
+  color: #000;
+  margin-top: 30px;
+  word-wrap: break-word;
+}
+main .form-box form .psw {
+  margin-top: 30px;
+  word-wrap: break-word;
+}
+main .form-box form .usr-in,
+main .form-box form .psw-in {
+  width: 85%;
+  height: 2.3rem;
+  font-size: 16px;
+  padding-left: 5px;
+  margin-top: 5px;
+  margin-left: 15px;
+  border: none;
+  border: 1.5px solid #dee2e6;
+  border-radius: 5px;
+}
+main .form-box form .psw-in {
+  margin-bottom: 10px;
+}
+main .form-box form .submit-btn {
+  width: 87.9%;
+  height: 2.3rem;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  border: none;
+  padding-left: 5px;
+  border-radius: 5px;
+  background-color: #ff477e;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 footer {
-  background-color: #9b2226;
+  background-color: #ff477e;
   width: 100%;
-  min-height: 40px;
-  max-height: 60px;
-  height: 2rem;
-  margin-top: 15%;
-  padding-top: 1rem;
+  height: 2vh;
+  padding: 1rem;
 }
-footer h5 {
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  font-weight: 400;
-  color: #fff;
+footer h6 {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font-weight: 300;
   margin: 0;
+  text-align: center;
+  word-wrap: break-word;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: #202124;
-  }
-  html body {
-    background-color: #202124;
-  }
-  html body main .container {
-    background-color: #202124;
-  }
-  html body main .container .mode-box .dark-mode {
-    color: #ff8300;
-  }
-  html body main .container .mode-box .dark-mode:hover {
-    color: #023e8a;
-  }
-  html body main .container .right form {
-    background-color: #0a9396;
-  }
-  html body main .container .right form .box-account .account {
-    color: #fff;
-  }
-  html body main .container .right form .welcome-text {
-    color: #fff;
-  }
-  html body main .container .right form label {
-    color: #fff;
-  }
-  html body main .container .right form h5 {
-    color: #fff;
-  }
-  html body main .container .right form h5:hover {
-    color: #e9d8a6;
-  }
-  html body main .container .right form input[type=submit] {
-    background-color: #ff8300;
-  }
-  html body main .container .right form input[type=submit]:hover {
-    background-color: #023e8a;
-  }
-  html body footer {
-    background-color: #0a9396;
+@media only screen and (max-height: 515px) {
+  body {
+    display: none;
   }
 }
-@media only screen and (min-height: 736px) {
+@media only screen and (max-height: 540px) {
   footer {
-    position: fixed;
+    margin: 0;
     bottom: 0;
+    padding: 0;
+    position: relative;
   }
 }
-@media only screen and (min-height: 1024px) {
-  html main .container .left {
-    width: 20%;
-    visibility: visible;
+@media only screen and (min-width: 334px) {
+  main .form-box {
     margin: auto;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    background-color: transparent;
   }
-  html main .container .left .traveler {
-    width: 100%;
-    visibility: visible;
-  }
-  html main .container .right .office-man {
-    visibility: visible;
-    width: 20%;
-    height: 100%;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-  }
-}
-@media only screen and (min-height: 1180px) {
-  html main .container .left {
-    width: 35%;
-  }
-  html main .container .right .office-man {
-    width: 35%;
-  }
-}
-@media only screen and (min-width: 1366px) {
-  html main {
-    width: 100%;
-  }
-  html main .container {
-    width: 100%;
-    margin: auto;
-    margin-top: 1rem;
-    display: grid;
-    grid-template-rows: 10% 90%;
-    grid-template-columns: 70% 30%;
-  }
-  html main .container .mode-box {
-    grid-row: 1/2;
-    width: 100%;
-    grid-column: 2/3;
-  }
-  html main .container .mode-box .dark-mode {
-    margin: 0;
-    padding-right: 0.7rem;
-  }
-  html main .container .left {
-    width: initial;
-    visibility: visible;
-    background-color: transparent;
-    grid-row: 2/3;
-    margin: auto;
-    display: flex;
-  }
-  html main .container .left .traveler {
-    width: 50%;
-    padding-left: 2rem;
-    padding: auto;
-    margin: auto;
-    text-align: center;
-    visibility: visible;
-  }
-  html main .container .right {
-    margin: 0;
-    grid-row: 2/3;
-    grid-column: 2/3;
-  }
-  html main .container .right .office-man {
-    margin: 0;
-    visibility: hidden;
-    width: 0%;
-    height: 0%;
-  }
-  html main .container .right form {
-    height: 2rem;
-    margin: 0;
-    margin-top: 1rem;
-  }
-  html footer {
-    position: absolute;
-    bottom: 0;
+  main .form-box form {
+    max-width: 300px;
   }
 }
 
