@@ -1,7 +1,9 @@
 @import "variables";
 
-body {
-	overflow-x: hidden;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 main {
@@ -19,6 +21,7 @@ main {
 		display: flex;
 		flex-direction: column;
 		margin: auto;
+		margin-top: 10%;
 		form {
 			width: 90%;
 			height: 415px;
@@ -109,12 +112,12 @@ main {
 	}
 }
 // Footer fixed
-@media only screen and (max-height: 540px) {
+@media screen and (min-height: 540px) {
 	footer {
-		margin: 0;
+		height: 7vh;
+		margin: none;
 		bottom: 0;
-		padding: 0;
-		position: relative;
+		position: absolute;
 	}
 }
 @media only screen and (min-width: 334px) {
@@ -124,6 +127,39 @@ main {
 			form {
 				max-width: 300px;
 			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+	main {
+		display: grid;
+		grid-template-columns: 50% 50%;
+
+		.vector-box {
+			width: 100%;
+			background-color: $alt-bg;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			img {
+				visibility: visible;
+				width: 390px;
+			}
+			.office-man {
+				margin-top: 25px;
+			}
+			.office-people {
+				margin-top: 25px;
+			}
+		}
+		.form-box {
+			grid-column: 2/-1;
+			grid-row: 1/2;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-items: flex-end;
 		}
 	}
 }
