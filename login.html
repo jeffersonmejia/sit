@@ -5,63 +5,36 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<title>SIT - Ingreso</title>
-
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css?family=Material+Icons"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone"
-		/>
-		<link rel="stylesheet" href="./css/normalize.css" />
-		<link rel="stylesheet" href="./css/login.css" />
+		<link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon" />
+		<title>SIT | Ingreso</title>
+		<link rel="stylesheet" href="login.css" />
 	</head>
 	<body>
 		<main>
-			<div class="container">
-				<div class="mode-box">
-					<span class="material-icons-outlined dark-mode"> light_mode </span>
-				</div>
-				<div class="left">
-					<img src="./img/travelers.svg" alt="Sorry, no avaliable" class="traveler" />
-				</div>
-				<div class="right">
-					<form action="">
-						<div class="box-account">
-							<span class="material-icons-outlined account"> account_circle </span>
-						</div>
-						<h1 class="welcome-text">Bienvenido</h1>
+			<div class="vector-box"></div>
+			<div class="vector-box"></div>
+			<div class="form-box">
+				<form>
+					<div class="icon-box">
+						<!-- <span class="material-icons-outlined">
+              account_circle
+              </span> -->
+						<img src="./img/icons/account_circle.svg" alt="" />
+						<h1>Bienvenido</h1>
+					</div>
 
-						<label for="user"> Usuario </label>
-						<input type="text" placeholder="Ingresa tu usuario" />
-						<h5>¿Olvidaste tu usuario?</h5>
+					<label for="usr">Usuario</label>
+					<input type="text" placeholder="Ingresa tu usuario" />
 
-						<label for="psw"> Contraseña </label>
-						<input type="password" class="pwd" placeholder="Ingresa tu contraseña" />
-						<h5>¿Olvidaste tu contraseña?</h5>
-						<input type="submit" value="Ingresar" />
-					</form>
-					<img src="./img/office-man.svg" class="office-man" alt="" />
-				</div>
+					<label for="psw">Contraseña</label>
+					<input type="password" name="psw" placeholder="Ingresa tu contraseña" />
+
+					<input type="submit" value="Ingresar" />
+				</form>
 			</div>
 		</main>
-
 		<footer>
-			<h5>© 2022 Jefferson, Inc</h5>
-			<h4></h4>
+			<h6>Sitio creado por Jefferson Mejía</h6>
 		</footer>
 	</body>
 </html>
