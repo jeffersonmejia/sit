@@ -4,17 +4,78 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="refresh" content="0; url=login.html" />
 
 		<link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon" />
-		<title>Panel de control</title>
-		<link rel="stylesheet" href="index.css" />
+		<title>SIT | Ingreso</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Material+Icons"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined"
+		/>
+		<!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
+		<link rel="stylesheet" href="./css/login.css" />
 	</head>
 	<body>
-		<header>
-			<nav></nav>
-		</header>
+		<main>
+			<div class="vector-box">
+				<img
+					src="./img/office_man.svg"
+					class="office-man"
+					alt="Lo sentimos, no disponible por el momento"
+				/>
+				<img
+					src="./img/office_people.svg"
+					class="office-people"
+					alt="Lo sentimos, no disponible por el momento"
+				/>
+			</div>
+			<div class="form-box">
+				<form id="form" action="panel.html">
+					<div class="icon-box">
+						<img
+							src="./img/favicon.svg"
+							alt="Lo sentimos, no disponible por el momento"
+							class="favicon"
+						/>
+						<h1 class="logo-txt">Bienvenido</h1>
+					</div>
 
-		<main>Comming soon...</main>
+					<label for="user" class="usr">Usuario</label>
+					<input
+						type="text"
+						name="user"
+						class="usr-in"
+						placeholder="Ingresa tu usuario"
+					/>
+					<h5 id="user-error" class="user-error"></h5>
+					<h5 id="user-right" class="user-right"></h5>
+
+					<label for="pass" class="psw">Contraseña</label>
+					<input
+						type="password"
+						name="pass"
+						class="psw-in"
+						placeholder="Ingresa tu contraseña"
+					/>
+					<h5 id="pass-error" class="pass-error"></h5>
+					<h5 id="pass-right" class="pass-right"></h5>
+
+					<input type="submit" value="Ingresar" class="submit-btn" id="send" />
+				</form>
+			</div>
+		</main>
+		<footer>
+			<h6>Sitio creado por Jefferson Mejía</h6>
+		</footer>
+		<script src="./js/login.js"></script>
 	</body>
 </html>

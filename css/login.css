@@ -20,17 +20,17 @@ main .form-box {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 10%;
 }
 main .form-box form {
   width: 90%;
   height: 415px;
   align-self: center;
+  transform: translate(0, 10%);
   background-color: #ffffff;
   font-family: "Raleway", sans-serif;
   border: none;
   border-radius: 5px;
-  box-shadow: 1px 1px 5px gray;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   flex-direction: column;
 }
@@ -39,20 +39,21 @@ main .form-box form .icon-box {
   margin-top: 10px;
   text-align: center;
 }
-main .form-box form .icon-box span {
-  font-size: 50px;
-  color: #ff0a54;
+main .form-box form .icon-box .favicon {
+  width: 50px;
+  height: 50px;
+  color: red;
 }
-main .form-box form .icon-box h1 {
+main .form-box form .icon-box .logo-txt {
   margin: 0;
   color: #ff0a54;
   word-wrap: break-word;
-  font-size: 32px;
+  font-size: 24px;
 }
 main .form-box form label {
   padding-left: 10px;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 400;
 }
 main .form-box form .usr {
   color: #000;
@@ -60,23 +61,37 @@ main .form-box form .usr {
   word-wrap: break-word;
 }
 main .form-box form .psw {
-  margin-top: 30px;
+  margin-top: 15px;
   word-wrap: break-word;
 }
 main .form-box form .usr-in,
 main .form-box form .psw-in {
   width: 85%;
   height: 2.3rem;
-  font-size: 16px;
+  font-size: 13px;
   padding-left: 5px;
   margin-top: 5px;
   margin-left: 15px;
   border: none;
   border: 1.5px solid #dee2e6;
   border-radius: 5px;
+  caret-color: #ff477e;
 }
-main .form-box form .psw-in {
-  margin-bottom: 10px;
+main .form-box form .user-error,
+main .form-box form .pass-error {
+  color: #ff0000;
+  font-size: 11px;
+  font-weight: 400;
+  margin-left: 25px;
+  margin-top: 5px;
+}
+main .form-box form .user-right,
+main .form-box form .pass-right {
+  color: #00b400;
+  font-size: 11px;
+  font-weight: 400;
+  margin-left: 25px;
+  margin-top: 5px;
 }
 main .form-box form .submit-btn {
   width: 87.9%;
@@ -91,8 +106,11 @@ main .form-box form .submit-btn {
   background-color: #ff477e;
   color: #ffffff;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 400;
+}
+main .form-box form .submit-btn:hover {
+  background-color: #ff5c8a;
 }
 
 footer {
@@ -130,6 +148,11 @@ footer h6 {
   main .form-box form {
     max-width: 300px;
   }
+  main .form-box form .usr-in,
+main .form-box form .psw-in,
+main .form-box form input[type=submit] {
+    width: 260px;
+  }
 }
 @media only screen and (min-width: 1080px) {
   main {
@@ -154,6 +177,7 @@ footer h6 {
     margin-top: 25px;
   }
   main .form-box {
+    transform: translate(0, -8%);
     grid-column: 2/-1;
     grid-row: 1/2;
     display: flex;

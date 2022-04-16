@@ -21,37 +21,40 @@ main {
 		display: flex;
 		flex-direction: column;
 		margin: auto;
-		margin-top: 10%;
+		// margin-top: 10%;
+
 		form {
 			width: 90%;
 			height: 415px;
 			align-self: center;
+			transform: translate(0, 10%);
 			background-color: $main-bg;
 			font-family: "Raleway", sans-serif;
 			border: none;
 			border-radius: 5px;
-			box-shadow: 1px 1px 5px gray;
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 			display: flex;
 			flex-direction: column;
 			.icon-box {
 				width: 100%;
 				margin-top: 10px;
 				text-align: center;
-				span {
-					font-size: 50px;
-					color: $primary;
+				.favicon {
+					width: 50px;
+					height: 50px;
+					color: red;
 				}
-				h1 {
+				.logo-txt {
 					margin: 0;
 					color: $primary;
 					word-wrap: break-word;
-					font-size: $h1;
+					font-size: $h2;
 				}
 			}
 			label {
 				padding-left: 10px;
-				font-size: $normal;
-				font-weight: $bold;
+				font-size: $h5;
+				font-weight: $regular;
 			}
 			.usr {
 				color: $content;
@@ -60,7 +63,7 @@ main {
 			}
 
 			.psw {
-				margin-top: 30px;
+				margin-top: 15px;
 				word-wrap: break-word;
 			}
 
@@ -68,7 +71,7 @@ main {
 			.psw-in {
 				width: 85%;
 				height: 2.3rem;
-				font-size: $normal;
+				font-size: $h5;
 				padding-left: 5px;
 				margin-top: 5px;
 				margin-left: 15px;
@@ -76,10 +79,26 @@ main {
 				border: none;
 				border: 1.5px solid $pholder;
 				border-radius: 5px;
+
+				caret-color: $secondary;
 			}
 
-			.psw-in {
-				margin-bottom: 10px;
+			.user-error,
+			.pass-error {
+				color: $alert;
+				font-size: $h6;
+				font-weight: $regular;
+				margin-left: 25px;
+				margin-top: 5px;
+			}
+
+			.user-right,
+			.pass-right {
+				color: $correct;
+				font-size: $h6;
+				font-weight: $regular;
+				margin-left: 25px;
+				margin-top: 5px;
 			}
 			.submit-btn {
 				width: 87.9%;
@@ -97,8 +116,11 @@ main {
 				color: $main-bg;
 				cursor: pointer;
 
-				font-size: $normal;
-				font-weight: $bold;
+				font-size: $h5;
+				font-weight: $regular;
+			}
+			.submit-btn:hover {
+				background-color: $hover-btn;
 			}
 		}
 	}
@@ -126,6 +148,11 @@ main {
 			margin: auto;
 			form {
 				max-width: 300px;
+				.usr-in,
+				.psw-in,
+				input[type="submit"] {
+					width: 260px;
+				}
 			}
 		}
 	}
@@ -154,6 +181,7 @@ main {
 			}
 		}
 		.form-box {
+			transform: translate(0, -8%);
 			grid-column: 2/-1;
 			grid-row: 1/2;
 			display: flex;
