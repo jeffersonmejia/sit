@@ -7,7 +7,7 @@
 
 nav {
   width: 100vw;
-  height: 55px;
+  height: 9vh;
   background-color: #ff477e;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -27,19 +27,100 @@ nav .home a {
   text-transform: uppercase;
   padding-top: 5px;
 }
+nav .home a:hover {
+  color: rgb(230, 230, 230);
+}
 nav .account {
   color: #ffffff;
   font-size: 40px;
   text-align: right;
-  margin-right: 10px;
+  padding-right: 15px;
   margin-top: 5px;
   cursor: pointer;
+}
+nav .account:hover {
+  color: rgb(230, 230, 230);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+main {
+  height: 85vh;
+  display: flex;
+}
+main .vector-box {
+  visibility: hidden;
+  width: 0;
+}
+main .vector-box img {
+  width: 0;
+}
+main .panel-box {
+  width: 75%;
+  margin-top: 30px;
+  margin-left: 33px;
+  display: grid;
+  grid-template-rows: 20% 90%;
+}
+main .panel-box .content-box h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 26px;
+}
+main .panel-box .content-box .info-box {
+  width: 80%;
+  margin: auto;
+  padding: 2%;
+}
+main .panel-box .content-box .info-box hgroup {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 2%;
+}
+main .panel-box .content-box .info-box hgroup h5 {
+  font-weight: 400;
+}
+main .panel-box .content-box .info-box .print-btn,
+main .panel-box .content-box .info-box .close-btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  margin-top: 5px;
+  background-color: #ff477e;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+main .panel-box .content-box .info-box .print-btn:hover,
+main .panel-box .content-box .info-box .close-btn:hover {
+  background-color: #ff5c8a;
+}
+main .panel-box .content-box .info-box .print-btn {
+  margin-top: 5px;
+}
+main .btn-box {
+  width: 40px;
+  height: 200px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+main .btn-box span {
+  margin: auto;
+  cursor: pointer;
+}
+main .btn-box span:hover {
+  color: #ff5c8a;
 }
 
 footer {
   background-color: #ff477e;
   width: 100%;
-  height: 2vh;
+  height: 6vh;
   padding: 1rem;
 }
 footer h6 {
@@ -49,6 +130,55 @@ footer h6 {
   margin: 0;
   text-align: center;
   word-wrap: break-word;
+}
+
+@media screen and (min-width: 465px) {
+  main .panel-box {
+    width: 95%;
+  }
+  main .panel-box .content-box {
+    margin: auto;
+    width: 265px;
+  }
+  main .panel-box .content-box .info-box {
+    width: 265px;
+    display: flex;
+    flex-direction: column;
+  }
+  main .panel-box .content-box .info-box hgroup {
+    width: 265px;
+  }
+  main .panel-box .content-box .info-box .print-btn,
+main .panel-box .content-box .info-box .close-btn {
+    width: 260px;
+    height: 50px;
+    margin-left: 2px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  main {
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 50% 45% 3%;
+  }
+  main .vector-box {
+    width: 100%;
+    height: 85vh;
+    background-color: #e9ecef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .vector-box img {
+    visibility: visible;
+    width: 290px;
+  }
+  main .vector-box .office-man {
+    margin-top: 25px;
+  }
+  main .vector-box .office-people {
+    margin-top: 25px;
+  }
 }
 
 /*# sourceMappingURL=panel.css.map */

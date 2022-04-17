@@ -1,0 +1,37 @@
+nav {
+	width: 100vw;
+	height: 9vh;
+	background-color: $secondary;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+
+	padding-top: 5px;
+	.home {
+		height: 50px;
+		border: none;
+		background-color: transparent;
+		text-align: left;
+		margin-left: 10px;
+		a {
+			text-decoration: none;
+			color: $main-bg;
+			font-weight: $bold;
+			text-transform: uppercase;
+			padding-top: 5px;
+		}
+		a:hover {
+			color: $hover-alt;
+		}
+	}
+	.account {
+		color: $main-bg;
+		font-size: 40px;
+		text-align: right;
+		padding-right: 15px;
+		margin-top: 5px;
+		cursor: pointer;
+	}
+	.account:hover {
+		color: $hover-alt;
+	}
+}

@@ -1,42 +1,137 @@
+@import "reset";
 @import "variables";
+@import "nav";
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Raleway", sans-serif;
+html,
+body {
+	overflow-x: hidden;
 }
 
-nav {
-	width: 100vw;
-	height: 55px;
-	background-color: $secondary;
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-
-	padding-top: 5px;
-	.home {
-		height: 50px;
-		border: none;
-		background-color: transparent;
-		text-align: left;
-		margin-left: 10px;
-		a {
-			text-decoration: none;
-			color: $main-bg;
-			font-weight: $bold;
-			text-transform: uppercase;
-			padding-top: 5px;
+main {
+	height: 85vh;
+	display: flex;
+	.vector-box {
+		visibility: hidden;
+		width: 0;
+		img {
+			width: 0;
 		}
 	}
-	.account {
-		color: $main-bg;
-		font-size: 40px;
-		text-align: right;
-		margin-right: 10px;
-		margin-top: 5px;
-		cursor: pointer;
+	.panel-box {
+		width: 75%;
+		margin-top: 30px;
+		margin-left: 33px;
+
+		display: grid;
+		grid-template-rows: 20% 90%;
+		.content-box {
+			h2 {
+				text-align: center;
+				margin-bottom: 5px;
+				margin-top: 26px;
+			}
+			.info-box {
+				width: 80%;
+				margin: auto;
+				padding: 2%;
+				hgroup {
+					border: 1px solid $content;
+					border-radius: $radious;
+					padding: 2%;
+					h5 {
+						font-weight: $regular;
+					}
+				}
+				.print-btn,
+				.close-btn {
+					width: 100%;
+					height: $btn-height;
+					border: none;
+					margin-top: 5px;
+					background-color: $secondary;
+					border-radius: $radious;
+					color: $main-bg;
+					text-align: center;
+					cursor: pointer;
+				}
+				.print-btn:hover,
+				.close-btn:hover {
+					background-color: $hover-btn;
+				}
+
+				.print-btn {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+	.btn-box {
+		width: 40px;
+		height: 200px;
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		span {
+			margin: auto;
+			cursor: pointer;
+		}
+		span:hover {
+			color: $hover-btn;
+		}
 	}
 }
 
 @import "footer";
+
+@media screen and (min-width: 465px) {
+	main {
+		.panel-box {
+			width: 95%;
+			.content-box {
+				margin: auto;
+				width: 265px;
+				.info-box {
+					width: 265px;
+					display: flex;
+					flex-direction: column;
+					hgroup {
+						width: 265px;
+					}
+					.print-btn,
+					.close-btn {
+						width: $btn-width;
+						height: $btn-height;
+						margin-left: 2px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1080px) {
+	main {
+		height: 85vh;
+		display: grid;
+		grid-template-columns: 50% 45% 3%;
+
+		.vector-box {
+			width: 100%;
+			height: 85vh;
+			background-color: $alt-bg;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			img {
+				visibility: visible;
+				width: 290px;
+			}
+			.office-man {
+				margin-top: 25px;
+			}
+			.office-people {
+				margin-top: 25px;
+			}
+		}
+	}
+}
