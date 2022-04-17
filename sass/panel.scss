@@ -11,9 +11,9 @@ main {
 	height: 85vh;
 	display: flex;
 	.vector-box {
-		visibility: hidden;
 		width: 0;
 		img {
+			visibility: hidden;
 			width: 0;
 		}
 	}
@@ -114,7 +114,6 @@ main {
 		height: 85vh;
 		display: grid;
 		grid-template-columns: 50% 45% 3%;
-
 		.vector-box {
 			width: 100%;
 			height: 85vh;

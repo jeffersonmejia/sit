@@ -52,10 +52,10 @@ main {
   display: flex;
 }
 main .vector-box {
-  visibility: hidden;
   width: 0;
 }
 main .vector-box img {
+  visibility: hidden;
   width: 0;
 }
 main .panel-box {
