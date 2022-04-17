@@ -16,14 +16,16 @@ main .vector-box img {
 }
 main .form-box {
   width: 100%;
-  height: 85vh;
+  height: 88vh;
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-top: 50vh;
 }
 main .form-box form {
   width: 90%;
   height: 415px;
+  margin-top: 3vh;
   align-self: center;
   transform: translate(0, 10%);
   background-color: #ffffff;
@@ -138,7 +140,6 @@ footer h6 {
     height: 7vh;
     margin: none;
     bottom: 0;
-    position: absolute;
   }
 }
 @media only screen and (min-width: 334px) {
@@ -161,6 +162,7 @@ main .form-box form input[type=submit] {
   }
   main .vector-box {
     width: 100%;
+    height: 93vh;
     background-color: #e9ecef;
     display: flex;
     flex-direction: column;
@@ -187,4 +189,4 @@ main .form-box form input[type=submit] {
   }
 }
 
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=index.css.map */

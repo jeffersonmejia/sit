@@ -17,15 +17,15 @@ main {
 	}
 	.form-box {
 		width: 100%;
-		height: 85vh;
+		height: 88vh;
 		display: flex;
 		flex-direction: column;
 		margin: auto;
-		// margin-top: 10%;
-
+		margin-top: 50vh;
 		form {
 			width: 90%;
 			height: 415px;
+			margin-top: 3vh;
 			align-self: center;
 			transform: translate(0, 10%);
 			background-color: $main-bg;
@@ -133,13 +133,12 @@ main {
 		display: none;
 	}
 }
-// Footer fixed
+// Footer fixed, aqui hay un error
 @media screen and (min-height: 540px) {
 	footer {
 		height: 7vh;
 		margin: none;
 		bottom: 0;
-		position: absolute;
 	}
 }
 @media only screen and (min-width: 334px) {
@@ -165,6 +164,7 @@ main {
 
 		.vector-box {
 			width: 100%;
+			height: 93vh;
 			background-color: $alt-bg;
 			display: flex;
 			flex-direction: column;
