@@ -2,46 +2,113 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by any browser but < IE9 */
   font-family: "Raleway", sans-serif;
 }
 
-nav {
+header {
+  display: flex;
+  flex-direction: column;
+}
+header nav {
   width: 100vw;
   height: 9vh;
   background-color: #ff477e;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding-top: 5px;
 }
-nav .home {
+header nav .home {
   height: 50px;
+  width: 80px;
   border: none;
   background-color: transparent;
   text-align: left;
-  margin-left: 10px;
+  padding-left: 10px;
+  cursor: pointer;
 }
-nav .home a {
+header nav .home a {
   text-decoration: none;
   color: #ffffff;
   font-weight: 700;
   text-transform: uppercase;
   padding-top: 5px;
+  height: 50px;
+  width: 50px;
 }
-nav .home a:hover {
-  color: rgb(230, 230, 230);
+header nav .home:hover {
+  background-color: #ff5c8a;
 }
-nav .account {
+header nav .account {
+  width: fit-content;
+  justify-self: flex-end;
   color: #ffffff;
-  font-size: 40px;
+  font-size: 32px;
   text-align: right;
-  padding-right: 15px;
+  margin-right: 21px;
   margin-top: 5px;
   cursor: pointer;
 }
-nav .account:hover {
+header nav .account:hover {
+  color: rgb(230, 230, 230);
+}
+header .container {
+  background-color: red;
+  width: 100%;
+  display: none;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+header .container .account-box {
+  position: fixed;
+  background-color: #ff477e;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: 10px;
+  width: 50%;
+  height: 6vh;
+  border-radius: 5px;
+  transform: translate(start, 0);
+}
+header .container .account-box ul {
+  margin: auto;
+  width: fit-content;
+  padding-top: 8px;
+}
+header .container .account-box ul li {
+  list-style: none;
+  margin: auto;
+}
+header .container .account-box ul li a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #ffffff;
+  width: fit-content;
+  font-size: 13px;
+  text-align: center;
+  cursor: pointer;
+}
+header .container .account-box ul a:hover {
   color: rgb(230, 230, 230);
 }
 
+@media screen and (min-width: 365px) {
+  header .container .account-box {
+    width: 182px;
+  }
+}
 html,
 body {
   overflow-x: hidden;
@@ -65,18 +132,13 @@ main .panel-box {
   display: grid;
   grid-template-rows: 20% 90%;
 }
-main .panel-box .content-box h2 {
-  text-align: center;
-  margin-bottom: 5px;
-  margin-top: 26px;
-}
 main .panel-box .content-box .info-box {
   width: 80%;
   margin: auto;
   padding: 2%;
 }
 main .panel-box .content-box .info-box hgroup {
-  border: 1px solid #000;
+  border: 1px solid #adadad;
   border-radius: 5px;
   padding: 2%;
 }
@@ -111,10 +173,14 @@ main .btn-box {
 }
 main .btn-box span {
   margin: auto;
+  color: #000;
   cursor: pointer;
 }
 main .btn-box span:hover {
   color: #ff5c8a;
+}
+main .btn-box .create-travel {
+  color: red;
 }
 
 footer {
@@ -141,18 +207,17 @@ footer h6 {
     width: 265px;
   }
   main .panel-box .content-box .info-box {
-    width: 265px;
+    width: 260px;
     display: flex;
     flex-direction: column;
   }
   main .panel-box .content-box .info-box hgroup {
-    width: 265px;
+    width: 260px;
   }
   main .panel-box .content-box .info-box .print-btn,
 main .panel-box .content-box .info-box .close-btn {
     width: 260px;
     height: 50px;
-    margin-left: 2px;
   }
 }
 @media screen and (min-width: 1080px) {

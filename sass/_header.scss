@@ -1,0 +1,100 @@
+header {
+	display: flex;
+	flex-direction: column;
+
+	nav {
+		width: 100vw;
+		height: 9vh;
+		background-color: $secondary;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+
+		.home {
+			height: 50px;
+			width: 80px;
+			border: none;
+			background-color: transparent;
+			text-align: left;
+			padding-left: 10px;
+			cursor: pointer;
+			a {
+				text-decoration: none;
+				color: $main-bg;
+				font-weight: $bold;
+				text-transform: uppercase;
+				padding-top: 5px;
+				height: 50px;
+				width: 50px;
+			}
+		}
+		.home:hover {
+			background-color: $hover-btn;
+		}
+		.account {
+			width: fit-content;
+			justify-self: flex-end;
+			color: $main-bg;
+			font-size: 32px;
+			text-align: right;
+			margin-right: 21px;
+			margin-top: 5px;
+			cursor: pointer;
+		}
+		.account:hover {
+			color: $hover-alt;
+		}
+	}
+	.container {
+		background-color: red;
+		width: 100%;
+		display: none;
+		visibility: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		.account-box {
+			position: fixed;
+			background-color: $secondary;
+			margin-top: 5px;
+			margin-left: auto;
+			margin-right: 10px;
+			width: 50%;
+			height: 6vh;
+			border-radius: $radious;
+			transform: translate(start, 0);
+			ul {
+				margin: auto;
+				width: fit-content;
+				padding-top: 8px;
+
+				li {
+					list-style: none;
+					margin: auto;
+					a {
+						text-decoration: none;
+						font-weight: $regular;
+						color: $main-bg;
+						width: fit-content;
+						font-size: $h5;
+						text-align: center;
+						cursor: pointer;
+					}
+				}
+
+				a:hover {
+					color: $hover-alt;
+				}
+			}
+		}
+	}
+}
+
+@media screen and(min-width: 365px) {
+	header {
+		.container {
+			.account-box {
+				width: 182px;
+			}
+		}
+	}
+}

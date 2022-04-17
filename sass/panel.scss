@@ -1,6 +1,6 @@
 @import "reset";
 @import "variables";
-@import "nav";
+@import "header";
 
 html,
 body {
@@ -10,6 +10,7 @@ body {
 main {
 	height: 85vh;
 	display: flex;
+
 	.vector-box {
 		width: 0;
 		img {
@@ -25,17 +26,12 @@ main {
 		display: grid;
 		grid-template-rows: 20% 90%;
 		.content-box {
-			h2 {
-				text-align: center;
-				margin-bottom: 5px;
-				margin-top: 26px;
-			}
 			.info-box {
 				width: 80%;
 				margin: auto;
 				padding: 2%;
 				hgroup {
-					border: 1px solid $content;
+					border: $border;
 					border-radius: $radious;
 					padding: 2%;
 					h5 {
@@ -73,10 +69,15 @@ main {
 		flex-direction: column;
 		span {
 			margin: auto;
+			color: $content;
 			cursor: pointer;
 		}
 		span:hover {
 			color: $hover-btn;
+		}
+
+		.create-travel {
+			color: red;
 		}
 	}
 }
@@ -91,17 +92,16 @@ main {
 				margin: auto;
 				width: 265px;
 				.info-box {
-					width: 265px;
+					width: 260px;
 					display: flex;
 					flex-direction: column;
 					hgroup {
-						width: 265px;
+						width: 260px;
 					}
 					.print-btn,
 					.close-btn {
 						width: $btn-width;
 						height: $btn-height;
-						margin-left: 2px;
 					}
 				}
 			}

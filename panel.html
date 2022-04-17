@@ -27,14 +27,23 @@
 		<link rel="stylesheet" href="./css/panel.css" />
 	</head>
 	<body>
-		<header>
+		<header id="header">
 			<nav>
 				<button class="home"><a href="./panel.html">Inicio</a></button>
-				<span class="material-icons-round account"> account_circle </span>
+				<span class="material-icons-round account" id="account-icon">
+					account_circle
+				</span>
 			</nav>
+			<div class="container">
+				<div class="account-box" id="account-box">
+					<ul>
+						<li><a href="./index.html">Cerrar sesión</a></li>
+					</ul>
+				</div>
+			</div>
 		</header>
 
-		<main>
+		<main id="main">
 			<div class="vector-box">
 				<img
 					src="./img/office_man.svg"
@@ -52,11 +61,11 @@
 				<div class="content-box">
 					<h2>Resumen</h2>
 					<div class="info-box">
-						<hgroup>
-							<h5>Viajes creados: --</h5>
-							<h5>Viaje actual: --</h5>
-							<h5>Cliente actual: --</h5>
-							<h5>Recaudado: $--</h5>
+						<hgroup id="summary">
+							<h5 id="current-travels">Viajes creados: --</h5>
+							<h5 id="current-travel">Viaje actual: --</h5>
+							<h5 id="current-client">Cliente actual: --</h5>
+							<h5 id="current-raised">Recaudado: $--</h5>
 						</hgroup>
 						<button class="print-btn">Generar comprobante</button>
 						<button class="close-btn">Cerrar viaje</button>
@@ -73,5 +82,6 @@
 		<footer>
 			<h6>Sitio creado por Jefferson Mejía</h6>
 		</footer>
+		<script src="./js/panel.js"></script>
 	</body>
 </html>
