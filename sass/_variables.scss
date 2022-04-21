@@ -2,12 +2,14 @@ $main-bg: #ffffff;
 $alt-bg: #e9ecef;
 $primary: #ff0a54;
 $secondary: #ff477e;
+$tertiary: #ff8bac;
 $hover-btn: #ff5c8a;
 $hover-alt: rgb(230, 230, 230);
 $pholder: #fffffff8;
 $content: #000;
 $alert: #ff0000;
 $correct: #00b400;
+$important: #e27900;
 
 $h1: 32px;
 $h2: 24px;
@@ -26,4 +28,12 @@ $radious: 5px;
 $btn-height: 50px;
 $btn-width: 260px;
 
+$in-width: 260px;
+$in-height: 50px;
+
 $border: 1px solid #adadad;
+$border-focus: 1px solid $secondary;
+$shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+$form-width: 300px;
+$form-height: 415px;

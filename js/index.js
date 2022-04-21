@@ -12,6 +12,13 @@ let guess = {
 	pass: false,
 };
 
+const alertDisplay = {
+	error: {
+		user: `Ingresa tus datos, por favor`,
+		pass: `Ingresa tus datos, por favor`,
+	},
+};
+
 const expression = {
 	user: /^[a-zA-Z]+[0-9]{4}$/,
 	pass: {
@@ -35,7 +42,7 @@ const validateForm = (e) => {
 			} else if (e.target.name === "user" && e.target.value === "") {
 				userRight.innerHTML = "";
 				userError.innerHTML = "";
-				userError.innerHTML = "Ingresa tus datos, por favor";
+				userError.innerHTML = alertDisplay.error.user;
 			} else {
 				if (expression.user.test(e.target.value)) {
 					userError.innerHTML = "";
@@ -57,7 +64,7 @@ const validateForm = (e) => {
 			} else if (e.target.name === "pass" && e.target.value === "") {
 				passRight.innerHTML = "";
 				passError.innerHTML = "";
-				passError.innerHTML = "Ingresa tus datos, por favor";
+				passError.innerHTML = alertDisplay.error.pass;
 			} else {
 				passError.innerHTML = "";
 			}

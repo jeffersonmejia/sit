@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon" />
+		<title>SIT | Registro</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Material+Icons"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Material+Icons+Round"
+		/>
+		<link rel="stylesheet" href="./css/register.css" />
+	</head>
+	<body>
+		<header id="header">
+			<nav>
+				<button class="home"><a href="./panel.html">Inicio</a></button>
+				<span class="material-icons-round account" id="account-icon">
+					account_circle
+				</span>
+			</nav>
+			<div class="container">
+				<div class="account-box" id="account-box">
+					<ul>
+						<li><a href="./index.html">Cerrar sesión</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main>
+			<form action="" id="form">
+				<h4 class="title">Registro</h4>
+				<label for="" class="label-top">Nombres</label>
+				<input type="text" id="name" placeholder="Ingresa tus nombres" />
+
+				<label for="">Apellidos</label>
+				<input type="text" placeholder="Ingresa tus apellidos" id="lastname" />
+
+				<label for="">Edad</label>
+				<input type="text" placeholder="Ingresa tu edad" id="age" />
+
+				<label for="">Nacionalidad</label>
+				<input type="text" placeholder="Ingresa tu nacionalidad" id="nationality" />
+
+				<label for="">Residencia</label>
+				<input type="text" placeholder="Ingresa la ciudad donde resides" id="residence" />
+
+				<label for="">Dirección</label>
+				<input type="text" placeholder="Urb. Ciudad verde | N29-114" id="address" />
+
+				<label for="">Teléfono</label>
+				<input type="tel" placeholder="Ingresa el número de teléfono" id="phone" />
+
+				<div class="aux-container">
+					<input type="checkbox" class="checkbox" id="terms" />
+					<label for="" class="conditions">Términos y condiciones</label>
+				</div>
+
+				<input type="submit" class="submit" value="Registrarme" / id="register-to-me">
+			</form>
+		</main>
+		<footer>
+			<h6>Sitio creado por Jefferson Mejía</h6>
+		</footer>
+		<script src="./js/register.js"></script>
+	</body>
+</html>

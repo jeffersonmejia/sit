@@ -10,3 +10,8 @@
 	user-select: none; /* Non-prefixed version, currently supported by any browser but < IE9 */
 	font-family: "Raleway", sans-serif;
 }
+
+html,
+body {
+	overflow-x: hidden;
+}

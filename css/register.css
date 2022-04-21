@@ -115,72 +115,82 @@ header .container .account-box ul a:hover {
   }
 }
 main {
-  height: 85vh;
   display: flex;
+  flex-direction: row;
+  justify-items: center;
+  flex-wrap: wrap;
 }
-main .vector-box {
-  width: 0;
-}
-main .vector-box img {
-  visibility: hidden;
-  width: 0;
-}
-main .panel-box {
-  width: 75%;
-  margin-top: 30px;
-  margin-left: 33px;
-  display: grid;
-  grid-template-rows: 20% 90%;
-}
-main .panel-box .content-box .info-box {
-  width: 80%;
+main form {
+  width: 90vw;
+  height: 100%;
   margin: auto;
-  padding: 2%;
-}
-main .panel-box .content-box .info-box hgroup {
-  border: 1px solid #adadad;
-  border-radius: 5px;
-  padding: 2%;
-}
-main .panel-box .content-box .info-box hgroup h5 {
-  font-weight: 400;
-}
-main .panel-box .content-box .info-box .print-btn,
-main .panel-box .content-box .info-box .close-btn {
-  width: 100%;
-  height: 50px;
-  border: none;
-  margin-top: 5px;
-  background-color: #ff477e;
-  border-radius: 5px;
-  color: #ffffff;
-  text-align: center;
-  cursor: pointer;
-}
-main .panel-box .content-box .info-box .print-btn:hover,
-main .panel-box .content-box .info-box .close-btn:hover {
-  background-color: #ff5c8a;
-}
-main .panel-box .content-box .info-box .print-btn {
-  margin-top: 5px;
-}
-main .btn-box {
-  width: 40px;
-  height: 200px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
   margin-top: 20px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   flex-direction: column;
 }
-main .btn-box span {
-  margin: auto;
-  color: #000;
-  cursor: pointer;
+main form .title {
+  font-size: 16px;
+  text-align: center;
+  color: #ff477e;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
-main .btn-box span:hover {
-  color: #ff5c8a;
+main form .label-top {
+  margin-top: 30px;
 }
-main .btn-box .create-travel {
-  color: red;
+main form label {
+  font-size: 13px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+main form label:not(.label-top) {
+  margin-top: 20px;
+}
+main form input:not(input[type=checkbox]) {
+  width: 80%;
+  height: 50px;
+  font-size: 11px;
+  margin-left: 30px;
+  padding-left: 10px;
+}
+main form input[type=text]:focus,
+main form input[type=tel]:focus {
+  outline: none;
+  border-bottom: 1px solid #ff477e;
+}
+main form input[type=text],
+main form input[type=tel] {
+  border: none;
+  border-bottom: 1px solid #adadad;
+}
+main form .aux-container {
+  display: row;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 20px;
+}
+main form .aux-container .conditions {
+  color: #e27900;
+  width: fit-content;
+  margin-left: 0;
+  padding-left: 2px;
+}
+main form .aux-container input {
+  margin-left: 30px;
+  border: none;
+}
+main form input[type=submit] {
+  border: none;
+  background-color: #ff8bac;
+  cursor: not-allowed;
+  color: #ffffff;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
 footer {
@@ -198,52 +208,10 @@ footer h6 {
   word-wrap: break-word;
 }
 
-@media screen and (min-width: 465px) {
-  main .panel-box {
-    width: 95%;
-  }
-  main .panel-box .content-box {
-    margin: auto;
-    width: 265px;
-  }
-  main .panel-box .content-box .info-box {
-    width: 260px;
-    display: flex;
-    flex-direction: column;
-  }
-  main .panel-box .content-box .info-box hgroup {
-    width: 260px;
-  }
-  main .panel-box .content-box .info-box .print-btn,
-main .panel-box .content-box .info-box .close-btn {
-    width: 260px;
-    height: 50px;
-  }
-}
-@media screen and (min-width: 1080px) {
-  main {
-    height: 85vh;
-    display: grid;
-    grid-template-columns: 50% 45% 3%;
-  }
-  main .vector-box {
-    width: 100%;
-    height: 85vh;
-    background-color: #e9ecef;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main .vector-box img {
-    visibility: visible;
-    width: 290px;
-  }
-  main .vector-box .office-man {
-    margin-top: 25px;
-  }
-  main .vector-box .office-people {
-    margin-top: 25px;
+@media screen and (min-width: 334px) {
+  main form {
+    width: 300px;
   }
 }
 
-/*# sourceMappingURL=panel.css.map */
+/*# sourceMappingURL=register.css.map */

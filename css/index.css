@@ -17,6 +17,11 @@
   font-family: "Raleway", sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 main {
   background-color: #ffffff;
 }
@@ -126,6 +131,15 @@ main .form-box form .submit-btn {
 }
 main .form-box form .submit-btn:hover {
   background-color: #ff5c8a;
+}
+main .form-box form .register {
+  text-decoration: none;
+  color: #ff477e;
+  font-size: 13px;
+  text-align: center;
+}
+main .form-box form .register:hover {
+  color: #ff5c8a;
 }
 
 footer {

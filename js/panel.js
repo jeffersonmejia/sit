@@ -1,9 +1,9 @@
 const account = document.getElementById("account-box");
 const accountBtn = document.getElementById("account-icon");
 const blockDisplay = document.getElementById("block-display");
+const buttons = document.getElementById("buttons");
 
 //DATA SUMMARY
-
 let clicked = false;
 
 accountBtn.addEventListener("click", () => {
@@ -14,7 +14,7 @@ accountBtn.addEventListener("click", () => {
 		clicked = false;
 		account.style.visibility = "hidden";
 	}
-	console.log("first, work");
+	console.log("listening event");
 });
 
-console.log("working");
+console.log("hola");
