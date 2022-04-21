@@ -20,32 +20,30 @@
 html,
 body {
   overflow-x: hidden;
+  height: 100vh;
 }
 
 main {
   background-color: #ffffff;
+  height: 100%;
 }
 main .vector-box {
-  width: 0px;
+  display: none;
 }
 main .vector-box img {
-  width: 0px;
-  visibility: hidden;
+  display: none;
 }
 main .form-box {
   width: 100%;
-  height: 88vh;
+  height: 415px;
   display: flex;
   flex-direction: column;
-  margin: auto;
-  margin-top: 50vh;
+  align-items: center;
+  justify-content: center;
 }
 main .form-box form {
   width: 90%;
   height: 415px;
-  margin-top: 3vh;
-  align-self: center;
-  transform: translate(0, 10%);
   background-color: #ffffff;
   font-family: "Raleway", sans-serif;
   border: none;
@@ -93,9 +91,13 @@ main .form-box form .psw-in {
   margin-top: 5px;
   margin-left: 15px;
   border: none;
-  border: 1.5px solid rgba(255, 255, 255, 0.9725490196);
-  border-radius: 5px;
+  border-bottom: 1px solid #adadad;
   caret-color: #ff477e;
+}
+main .form-box form .usr-in:focus,
+main .form-box form .psw-in:focus {
+  outline: none;
+  border-bottom: 1px solid #000;
 }
 main .form-box form .user-error,
 main .form-box form .pass-error {
@@ -145,8 +147,9 @@ main .form-box form .register:hover {
 footer {
   background-color: #ff477e;
   width: 100%;
-  height: 6vh;
-  padding: 1rem;
+  height: 40px;
+  display: grid;
+  place-items: center;
 }
 footer h6 {
   font-family: "Raleway", sans-serif;
@@ -157,15 +160,14 @@ footer h6 {
   word-wrap: break-word;
 }
 
-@media only screen and (max-height: 515px) {
+@media screen and (min-height: 520px) {
   body {
-    display: none;
+    display: flex;
+    flex-direction: column;
   }
-}
-@media screen and (min-height: 540px) {
+
   footer {
-    height: 7vh;
-    margin: none;
+    position: absolute;
     bottom: 0;
   }
 }
@@ -189,14 +191,15 @@ main .form-box form input[type=submit] {
   }
   main .vector-box {
     width: 100%;
-    height: 93vh;
+    height: 100%;
     background-color: #e9ecef;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   main .vector-box img {
-    visibility: visible;
+    display: block;
     width: 390px;
   }
   main .vector-box .office-man {
@@ -206,7 +209,6 @@ main .form-box form input[type=submit] {
     margin-top: 25px;
   }
   main .form-box {
-    transform: translate(0, -8%);
     grid-column: 2/-1;
     grid-row: 1/2;
     display: flex;

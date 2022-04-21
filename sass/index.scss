@@ -3,26 +3,25 @@
 
 main {
 	background-color: $main-bg;
+	height: 100%;
 	.vector-box {
-		width: 0px;
+		display: none;
 		img {
-			width: 0px;
-			visibility: hidden;
+			display: none;
 		}
 	}
 	.form-box {
 		width: 100%;
-		height: 88vh;
+		height: $form-height;
 		display: flex;
 		flex-direction: column;
-		margin: auto;
-		margin-top: 50vh;
+		align-items: center;
+		justify-content: center;
+
 		form {
 			width: 90%;
-			height: 415px;
-			margin-top: 3vh;
-			align-self: center;
-			transform: translate(0, 10%);
+			height: $form-height;
+
 			background-color: $main-bg;
 			font-family: "Raleway", sans-serif;
 			border: none;
@@ -70,12 +69,16 @@ main {
 				padding-left: 5px;
 				margin-top: 5px;
 				margin-left: 15px;
-
 				border: none;
-				border: 1.5px solid $pholder;
-				border-radius: 5px;
+				border-bottom: $border;
 
 				caret-color: $secondary;
+			}
+
+			.usr-in:focus,
+			.psw-in:focus {
+				outline: none;
+				border-bottom: $border-focus;
 			}
 
 			.user-error,
@@ -132,19 +135,18 @@ main {
 
 @import "footer";
 // FOR BUGS
-@media only screen and (max-height: 515px) {
+
+@media screen and (min-height: 520px) {
 	body {
-		display: none;
+		display: flex;
+		flex-direction: column;
 	}
-}
-// Footer fixed, aqui hay un error
-@media screen and (min-height: 540px) {
 	footer {
-		height: 7vh;
-		margin: none;
+		position: absolute;
 		bottom: 0;
 	}
 }
+
 @media only screen and (min-width: 334px) {
 	main {
 		.form-box {
@@ -168,13 +170,14 @@ main {
 
 		.vector-box {
 			width: 100%;
-			height: 93vh;
+			height: 100%;
 			background-color: $alt-bg;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			justify-content: center;
 			img {
-				visibility: visible;
+				display: block;
 				width: 390px;
 			}
 			.office-man {
@@ -185,7 +188,6 @@ main {
 			}
 		}
 		.form-box {
-			transform: translate(0, -8%);
 			grid-column: 2/-1;
 			grid-row: 1/2;
 			display: flex;
