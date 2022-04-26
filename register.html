@@ -28,7 +28,7 @@
 	<body>
 		<header id="header">
 			<nav>
-				<button class="home"><a href="./panel.html">Inicio</a></button>
+				<button class="home"><a href="./index.html">Inicio</a></button>
 				<span class="material-icons-round account" id="account-icon">
 					account_circle
 				</span>
@@ -44,33 +44,52 @@
 		<main>
 			<form action="" id="form">
 				<h4 class="title">Registro</h4>
-				<label for="" class="label-top">Nombres</label>
-				<input type="text" id="name" placeholder="Ingresa tus nombres" />
+				<div class="group-1">
+					<label for="" class="label-top">Nombres</label>
+					<input type="text" id="name" placeholder="Ingresa tus nombres" />
+					<h5 class="alert" id="alert-name"></h5>
 
-				<label for="">Apellidos</label>
-				<input type="text" placeholder="Ingresa tus apellidos" id="lastname" />
+					<label for="">Apellidos</label>
+					<input type="text" placeholder="Ingresa tus apellidos" id="lastname" />
+					<h5 class="alert" id="alert-lastname"></h5>
 
-				<label for="">Edad</label>
-				<input type="text" placeholder="Ingresa tu edad" id="age" />
+					<label for="">Edad</label>
+					<input type="text" placeholder="Ingresa tu edad" id="age" />
+					<h5 class="alert" id="alert-age"></h5>
 
-				<label for="">Nacionalidad</label>
-				<input type="text" placeholder="Ingresa tu nacionalidad" id="nationality" />
+					<label for="">Nacionalidad</label>
+					<input type="text" placeholder="Ingresa tu nacionalidad" id="nationality" />
+					<h5 class="alert" id="alert-nationality"></h5>
+				</div>
 
-				<label for="">Residencia</label>
-				<input type="text" placeholder="Ingresa la ciudad donde resides" id="residence" />
+				<div class="group-2">
+					<label for="">Residencia</label>
+					<input
+						type="text"
+						placeholder="Ingresa la ciudad donde resides"
+						id="residence"
+					/>
+					<h5 class="alert" id="alert-residence"></h5>
 
-				<label for="">Dirección</label>
-				<input type="text" placeholder="Urb. Ciudad verde | N29-114" id="address" />
+					<label for="">Dirección</label>
+					<input type="text" placeholder="Urb. Ciudad verde | N29-114" id="address" />
+					<h5 class="alert" id="alert-address"></h5>
 
-				<label for="">Teléfono</label>
-				<input type="tel" placeholder="Ingresa el número de teléfono" id="phone" />
+					<label for="">Teléfono</label>
+					<input type="tel" placeholder="Ingresa el número de teléfono" id="phone" />
+					<h5 class="alert" id="alert-phone"></h5>
+
+					<label for="">Correo electrónico</label>
+					<input type="text" id="email" placeholder="Ingresa tu correo electrónico" />
+					<h5 class="alert" id="alert-email"></h5>
+				</div>
 
 				<div class="aux-container">
 					<input type="checkbox" class="checkbox" id="terms" />
 					<label for="" class="conditions">Términos y condiciones</label>
 				</div>
 
-				<input type="submit" class="submit" value="Registrarme" / id="register-to-me">
+				<input type="submit" class="submit" value="Registrarme" / id="submit">
 			</form>
 		</main>
 		<footer>

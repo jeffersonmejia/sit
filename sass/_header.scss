@@ -1,10 +1,11 @@
 header {
 	display: flex;
 	flex-direction: column;
-
+	align-items: center;
+	justify-content: baseline;
 	nav {
 		width: 100vw;
-		height: 9vh;
+		height: 50px;
 		background-color: $secondary;
 		display: grid;
 		grid-template-columns: 1fr 2fr;
@@ -14,8 +15,7 @@ header {
 			width: 80px;
 			border: none;
 			background-color: transparent;
-			text-align: left;
-			padding-left: 10px;
+			text-align: center;
 			cursor: pointer;
 			a {
 				text-decoration: none;

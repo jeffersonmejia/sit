@@ -4,6 +4,8 @@
 main {
 	background-color: $main-bg;
 	height: 100%;
+	display: grid;
+	place-items: center;
 	.vector-box {
 		display: none;
 		img {
@@ -12,16 +14,15 @@ main {
 	}
 	.form-box {
 		width: 100%;
-		height: $form-height;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
 
+		display: grid;
+		place-items: center;
+		padding: 20px;
 		form {
 			width: 90%;
-			height: $form-height;
-
+			height: fit-content;
+			padding-top: 10px;
+			padding-bottom: 40px;
 			background-color: $main-bg;
 			font-family: "Raleway", sans-serif;
 			border: none;
@@ -31,7 +32,6 @@ main {
 			flex-direction: column;
 			.icon-box {
 				width: 100%;
-				margin-top: 10px;
 				text-align: center;
 				.favicon {
 					width: 50px;
@@ -176,9 +176,10 @@ main {
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			padding-bottom: 40px;
 			img {
 				display: block;
-				width: 390px;
+				width: 350px;
 			}
 			.office-man {
 				margin-top: 25px;
