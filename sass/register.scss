@@ -2,8 +2,25 @@
 @import "variables";
 @import "header";
 
+body::-webkit-scrollbar {
+	position: absolute;
+	width: 10px;
+	background-color: $scroll-bg;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: $scroll-color;
+	border-radius: 50px;
+	margin-right: 10px;
+	padding-right: 10px;
+	border-right: 1px solid $main-bg;
+	border-top: 1px solid $main-bg;
+	border-bottom: 1px solid $main-bg;
+	border-left: 1px solid $main-bg;
+}
+
 main {
-	margin-top: 90px;
+	padding-top: 15px;
 	margin-bottom: 90px;
 	form {
 		width: 90vw;
@@ -137,5 +154,12 @@ main {
 				background-color: red;
 			}
 		}
+	}
+}
+
+@media screen and (min-height: 768px) {
+	footer {
+		bottom: 0;
+		position: relative;
 	}
 }
