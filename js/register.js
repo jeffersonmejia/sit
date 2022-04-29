@@ -22,7 +22,7 @@ const expression = {
 	residence: /^([a-zA-Z]|[a-zA-Z]\s[a-zA-Z]){4,16}$/,
 	address: /^.+$/,
 	phone: /^\d{10}$/,
-	email: /^[a-zA-Z]{4,16}\d*@(gmail|outlook|icloud).com$/,
+	email: /^[a-zA-Z]{4,24}\d*@(gmail|outlook|icloud).com$/,
 };
 
 const listAlert = {

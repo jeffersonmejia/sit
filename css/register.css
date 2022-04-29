@@ -20,23 +20,27 @@
 html,
 body {
   overflow-x: hidden;
-  height: 100vh;
+  height: 100%;
 }
 
-header {
+body header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: baseline;
+  position: fixed;
+  width: 100%;
+  margin-right: 15px;
 }
-header nav {
-  width: 100vw;
+body header nav {
+  margin-right: 1px;
+  width: 100%;
   height: 50px;
   background-color: #ff477e;
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
-header nav .home {
+body header nav .home {
   height: 50px;
   width: 80px;
   border: none;
@@ -44,7 +48,7 @@ header nav .home {
   text-align: center;
   cursor: pointer;
 }
-header nav .home a {
+body header nav .home a {
   text-decoration: none;
   color: #ffffff;
   font-weight: 700;
@@ -53,10 +57,10 @@ header nav .home a {
   height: 50px;
   width: 50px;
 }
-header nav .home:hover {
+body header nav .home:hover {
   background-color: #ff6c96;
 }
-header nav .account {
+body header nav .account {
   width: fit-content;
   justify-self: flex-end;
   color: #ffffff;
@@ -66,10 +70,10 @@ header nav .account {
   margin-top: 5px;
   cursor: pointer;
 }
-header nav .account:hover {
+body header nav .account:hover {
   color: #e6e6e6;
 }
-header .container {
+body header .container {
   background-color: red;
   width: 100%;
   display: none;
@@ -78,7 +82,7 @@ header .container {
   flex-direction: column;
   align-items: flex-end;
 }
-header .container .account-box {
+body header .container .account-box {
   position: fixed;
   background-color: #ff477e;
   margin-top: 5px;
@@ -89,16 +93,16 @@ header .container .account-box {
   border-radius: 5px;
   transform: translate(start, 0);
 }
-header .container .account-box ul {
+body header .container .account-box ul {
   margin: auto;
   width: fit-content;
   padding-top: 8px;
 }
-header .container .account-box ul li {
+body header .container .account-box ul li {
   list-style: none;
   margin: auto;
 }
-header .container .account-box ul li a {
+body header .container .account-box ul li a {
   text-decoration: none;
   font-weight: 400;
   color: #ffffff;
@@ -107,8 +111,11 @@ header .container .account-box ul li a {
   text-align: center;
   cursor: pointer;
 }
-header .container .account-box ul a:hover {
+body header .container .account-box ul a:hover {
   color: #e6e6e6;
+}
+body main {
+  margin-top: 50px;
 }
 
 @media screen and (min-width: 365px) {
@@ -116,8 +123,25 @@ header .container .account-box ul a:hover {
     width: 182px;
   }
 }
+body::-webkit-scrollbar {
+  position: absolute;
+  width: 10px;
+  background-color: #e6e6e6;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff8bac;
+  border-radius: 50px;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+}
+
 main {
-  margin-top: 90px;
+  padding-top: 15px;
   margin-bottom: 90px;
 }
 main form {
@@ -209,9 +233,13 @@ main form input[type=submit] {
 footer {
   background-color: #ff477e;
   width: 100%;
+  min-height: fit-content;
+  max-height: 40px;
   height: 40px;
   display: grid;
   place-items: center;
+  position: absolute;
+  bottom: 0;
 }
 footer h6 {
   font-family: "Raleway", sans-serif;
@@ -257,6 +285,12 @@ main form .group-2 label {
     grid-column: 1/3;
     max-width: 260px;
     background-color: red;
+  }
+}
+@media screen and (min-height: 768px) {
+  footer {
+    bottom: 0;
+    position: relative;
   }
 }
 

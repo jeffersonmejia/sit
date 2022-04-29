@@ -2,10 +2,10 @@
 @import "variables";
 
 main {
-	background-color: $main-bg;
-	height: 100%;
+	background-color: $alt-bg;
+	height: 100vh;
 	display: grid;
-	place-items: center;
+
 	.vector-box {
 		display: none;
 		img {
@@ -13,23 +13,24 @@ main {
 		}
 	}
 	.form-box {
-		width: 100%;
-
 		display: grid;
 		place-items: center;
 		padding: 20px;
+
 		form {
-			width: 90%;
-			height: fit-content;
-			padding-top: 10px;
-			padding-bottom: 40px;
+			max-width: 300px;
+			min-width: fit-content;
+			width: 100%;
+
+			height: 420px;
 			background-color: $main-bg;
+			display: flex;
+			flex-direction: column;
+			padding-top: 30px;
 			font-family: "Raleway", sans-serif;
 			border: none;
 			border-radius: 5px;
 			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-			display: flex;
-			flex-direction: column;
 			.icon-box {
 				width: 100%;
 				text-align: center;
@@ -46,7 +47,7 @@ main {
 				}
 			}
 			label {
-				padding-left: 10px;
+				padding-left: 20px;
 				font-size: $h5;
 				font-weight: $regular;
 			}
@@ -119,7 +120,9 @@ main {
 			}
 			.submit-btn:hover {
 				background-color: $hover-btn;
+				transition: background-color 400ms ease-in;
 			}
+
 			.register {
 				text-decoration: none;
 				color: $secondary;
@@ -128,59 +131,35 @@ main {
 			}
 			.register:hover {
 				color: $hover-btn;
+				transition: background-color 400ms ease-in;
 			}
 		}
 	}
 }
 
 @import "footer";
-// FOR BUGS
-
-@media screen and (min-height: 520px) {
-	body {
-		display: flex;
-		flex-direction: column;
-	}
-	footer {
-		position: absolute;
-		bottom: 0;
-	}
-}
-
-@media only screen and (min-width: 334px) {
-	main {
-		.form-box {
-			margin: auto;
-			form {
-				max-width: 300px;
-				.usr-in,
-				.psw-in,
-				input[type="submit"] {
-					width: 260px;
-				}
-			}
-		}
-	}
-}
 
 @media only screen and (min-width: 1080px) {
 	main {
 		display: grid;
 		grid-template-columns: 50% 50%;
 
+		height: 100%;
 		.vector-box {
 			width: 100%;
 			height: 100%;
-			background-color: $alt-bg;
+			background-color: $main-bg;
+
 			display: flex;
 			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			padding-bottom: 40px;
+
 			img {
 				display: block;
 				width: 350px;
+				align-self: center;
+				padding-top: 15px;
 			}
+
 			.office-man {
 				margin-top: 25px;
 			}
@@ -189,12 +168,17 @@ main {
 			}
 		}
 		.form-box {
+			height: 94%;
+			padding: 0;
+			padding-right: 40px;
 			grid-column: 2/-1;
 			grid-row: 1/2;
 			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			justify-items: flex-end;
+			flex-direction: rows;
+			justify-content: flex-end;
+			form {
+				align-self: center;
+			}
 		}
 	}
 }
