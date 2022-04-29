@@ -16,3 +16,14 @@ body {
 	overflow-x: hidden;
 	height: 100%;
 }
+body::-webkit-scrollbar {
+	position: absolute;
+	width: 10px;
+	background-color: $scroll-bg;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: $scroll-color;
+	border-radius: 50px;
+	border: 1px solid $main-bg;
+}
