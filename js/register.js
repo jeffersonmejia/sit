@@ -12,6 +12,7 @@ const alerts = {
 	address: document.getElementById("alert-address"),
 	phone: document.getElementById("alert-phone"),
 	email: document.getElementById("alert-email"),
+	submit: document.getElementById("alert-submit"),
 };
 
 const expression = {
@@ -28,25 +29,16 @@ const expression = {
 const listAlert = {
 	inNull: "Ingresa tus datos, por favor",
 	noValid: "Tus datos no son válidos",
+	submit: "Te has registrado correctamente",
 };
 
 const listColor = {
-	sucessful: "#55ff33",
+	sucessful: "#029918",
 	unsuccessful: "#ff3333",
 	enable: "#ff477e",
 	disable: "#ff8bac",
 };
-
-const filled = {
-	name: false,
-	lastname: false,
-	age: false,
-	nationality: false,
-	residence: false,
-	address: false,
-	phone: false,
-	email: false,
-};
+let filled = false;
 
 const validateForm = (e) => {
 	switch (e.target.id) {
@@ -155,6 +147,7 @@ checkBox.addEventListener("click", () => {
 	if (checkBox.checked) {
 		submit.style.backgroundColor = listColor.enable;
 		submit.style.cursor = "pointer";
+		filled = true;
 	} else {
 		submit.style.backgroundColor = listColor.disable;
 		submit.style.cursor = "not-allowed";
@@ -168,4 +161,8 @@ inputs.forEach((input) => {
 
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
+	if (filled === true) {
+		alerts.submit.innerHTML = listAlert.submit;
+		alerts.submit.style.color = listColor.sucessful;
+	}
 });

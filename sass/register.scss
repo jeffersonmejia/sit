@@ -111,6 +111,15 @@ main {
 			margin-top: 20px;
 			border-radius: $radious;
 		}
+
+		.alert {
+			width: fit-content;
+			color: $content;
+			margin-top: 15px;
+
+			font-size: $h6;
+			font-weight: normal;
+		}
 	}
 }
 

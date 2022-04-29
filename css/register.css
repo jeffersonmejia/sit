@@ -229,6 +229,13 @@ main form input[type=submit] {
   margin-top: 20px;
   border-radius: 5px;
 }
+main form .alert {
+  width: fit-content;
+  color: #000;
+  margin-top: 15px;
+  font-size: 11px;
+  font-weight: normal;
+}
 
 footer {
   background-color: #ff477e;
