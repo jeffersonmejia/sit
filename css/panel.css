@@ -23,6 +23,18 @@ body {
   height: 100%;
 }
 
+body::-webkit-scrollbar {
+  position: absolute;
+  width: 10px;
+  background-color: #e6e6e6;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff8bac;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+}
+
 body header {
   display: flex;
   flex-direction: column;
@@ -30,10 +42,9 @@ body header {
   justify-content: baseline;
   position: fixed;
   width: 100%;
-  margin-right: 15px;
 }
 body header nav {
-  margin-right: 1px;
+  margin-right: 20px;
   width: 100%;
   height: 50px;
   background-color: #ff477e;
@@ -195,13 +206,10 @@ main .btn-box .create-travel {
 footer {
   background-color: #ff477e;
   width: 100%;
-  min-height: fit-content;
   max-height: 40px;
   height: 40px;
   display: grid;
   place-items: center;
-  position: absolute;
-  bottom: 0;
 }
 footer h6 {
   font-family: "Raleway", sans-serif;
