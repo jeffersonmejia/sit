@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: none;
   font-family: "Raleway", sans-serif;
 }
 
@@ -32,7 +33,6 @@ body header {
   width: 100%;
 }
 body header nav {
-  margin-right: 20px;
   width: 100%;
   height: 50px;
   background-color: #ff477e;
@@ -123,73 +123,78 @@ body main {
     width: 182px;
   }
 }
-main {
-  height: 85vh;
-  display: flex;
+header nav {
+  margin-right: 20px;
 }
-main .vector-box {
-  width: 0;
+
+main .vector-container img {
+  display: none;
 }
-main .vector-box img {
-  visibility: hidden;
-  width: 0;
-}
-main .panel-box {
-  width: 75%;
-  margin-top: 30px;
-  margin-left: 33px;
-  display: grid;
-  grid-template-rows: 20% 90%;
-}
-main .panel-box .content-box .info-box {
-  width: 80%;
-  margin: auto;
-  padding: 2%;
-}
-main .panel-box .content-box .info-box hgroup {
-  border: 1px solid #adadad;
-  border-radius: 5px;
-  padding: 2%;
-}
-main .panel-box .content-box .info-box hgroup h5 {
-  font-weight: 400;
-}
-main .panel-box .content-box .info-box .print-btn,
-main .panel-box .content-box .info-box .close-btn {
-  width: 100%;
-  height: 50px;
-  border: none;
-  margin-top: 5px;
-  background-color: #ff477e;
-  border-radius: 5px;
-  color: #ffffff;
-  text-align: center;
-  cursor: pointer;
-}
-main .panel-box .content-box .info-box .print-btn:hover,
-main .panel-box .content-box .info-box .close-btn:hover {
-  background-color: #ff6c96;
-}
-main .panel-box .content-box .info-box .print-btn {
-  margin-top: 5px;
-}
-main .btn-box {
-  width: 40px;
-  height: 200px;
-  margin-top: 20px;
+main .panel-container {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-items: center;
 }
-main .btn-box span {
+main .panel-container h3 {
+  width: 100%;
+  margin-bottom: 10px;
+  color: #ff477e;
+  text-align: center;
+}
+main .panel-container ul {
+  width: 90%;
+  max-width: 277px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #adadad;
+  display: flex;
+  flex-direction: rows;
+  flex-wrap: wrap;
+  row-gap: 15px;
+}
+main .panel-container ul li {
+  list-style: none;
+  width: 100%;
+  padding-left: 15px;
+  font-size: 13px;
+}
+main .panel-container ul button {
+  width: 90%;
+  max-width: 260px;
+  height: 50px;
+  border-radius: 5px;
   margin: auto;
-  color: #000;
   cursor: pointer;
+  transition: background-color linear 400ms;
 }
-main .btn-box span:hover {
-  color: #ff6c96;
+main .panel-container ul button:hover {
+  background-color: #ff8bac;
+  color: #ffffff;
 }
-main .btn-box .create-travel {
-  color: red;
+main .panel-container div {
+  width: 90%;
+  max-width: 568.797px;
+  display: flex;
+  flex-direction: rows;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 10px;
+  column-gap: 15px;
+  margin-bottom: 30px;
+}
+main .panel-container div button {
+  width: 90%;
+  max-width: 260px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color linear 400ms;
+}
+main .panel-container div button:hover {
+  background-color: #ff8bac;
+  color: #ffffff;
 }
 
 footer {
@@ -209,51 +214,56 @@ footer h6 {
   word-wrap: break-word;
 }
 
-@media screen and (min-width: 465px) {
-  main .panel-box {
-    width: 95%;
+@media screen and (min-height: 510px) {
+  header nav {
+    margin-right: 0;
   }
-  main .panel-box .content-box {
-    margin: auto;
-    width: 265px;
-  }
-  main .panel-box .content-box .info-box {
-    width: 260px;
+}
+@media screen and (min-height: 600px) {
+  main {
+    height: 90%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
   }
-  main .panel-box .content-box .info-box hgroup {
-    width: 260px;
+  main .panel-container div {
+    flex-direction: rows;
+    min-width: 540px;
   }
-  main .panel-box .content-box .info-box .print-btn,
-main .panel-box .content-box .info-box .close-btn {
-    width: 260px;
-    height: 50px;
+
+  footer {
+    bottom: 0;
+    position: absolute;
   }
 }
 @media screen and (min-width: 1080px) {
   main {
-    height: 85vh;
     display: grid;
-    grid-template-columns: 50% 45% 3%;
+    grid-template-columns: repeat(2, 1fr);
   }
-  main .vector-box {
-    width: 100%;
-    height: 85vh;
+  main .vector-container {
     background-color: #f8f8f8;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: rows;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
   }
-  main .vector-box img {
-    visibility: visible;
-    width: 290px;
+  main .vector-container img {
+    display: block;
   }
-  main .vector-box .office-man {
-    margin-top: 25px;
+  main .panel-container {
+    height: 94%;
   }
-  main .vector-box .office-people {
-    margin-top: 25px;
+  main .panel-container h3 {
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #adadad;
   }
 }
 

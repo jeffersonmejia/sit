@@ -2,129 +2,142 @@
 @import "reset";
 @import "header";
 
+header {
+	nav {
+		margin-right: 20px;
+	}
+}
+
 main {
-	height: 85vh;
-	display: flex;
-
-	.vector-box {
-		width: 0;
+	.vector-container {
 		img {
-			visibility: hidden;
-			width: 0;
+			display: none;
 		}
 	}
-	.panel-box {
-		width: 75%;
-		margin-top: 30px;
-		margin-left: 33px;
-
-		display: grid;
-		grid-template-rows: 20% 90%;
-		.content-box {
-			.info-box {
-				width: 80%;
-				margin: auto;
-				padding: 2%;
-				hgroup {
-					border: $border;
-					border-radius: $radious;
-					padding: 2%;
-					h5 {
-						font-weight: $regular;
-					}
-				}
-				.print-btn,
-				.close-btn {
-					width: 100%;
-					height: $btn-height;
-					border: none;
-					margin-top: 5px;
-					background-color: $secondary;
-					border-radius: $radious;
-					color: $main-bg;
-					text-align: center;
-					cursor: pointer;
-				}
-				.print-btn:hover,
-				.close-btn:hover {
-					background-color: $hover-btn;
-				}
-
-				.print-btn {
-					margin-top: 5px;
-				}
-			}
-		}
-	}
-	.btn-box {
-		width: 40px;
-		height: 200px;
-		margin-top: 20px;
+	.panel-container {
+		margin-top: 60px;
 		display: flex;
 		flex-direction: column;
-		span {
-			margin: auto;
-			color: $content;
-			cursor: pointer;
+		align-items: center;
+		justify-items: center;
+		h3 {
+			width: 100%;
+			margin-bottom: 10px;
+			color: $secondary;
+			text-align: center;
 		}
-		span:hover {
-			color: $hover-btn;
+		ul {
+			width: 90%;
+			max-width: 277px;
+			margin-bottom: 30px;
+			padding-bottom: 15px;
+			border-bottom: $border;
+			display: flex;
+			flex-direction: rows;
+			flex-wrap: wrap;
+			row-gap: 15px;
+			li {
+				list-style: none;
+				width: 100%;
+				padding-left: 15px;
+				font-size: $h5;
+			}
+			button {
+				width: 90%;
+				max-width: 260px;
+				height: $btn-height;
+				border-radius: $radius;
+				margin: auto;
+				cursor: pointer;
+				transition: background-color linear 400ms;
+			}
+			button:hover {
+				background-color: $tertiary;
+				color: $main-bg;
+			}
 		}
+		div {
+			width: 90%;
+			max-width: 568.797px;
 
-		.create-travel {
-			color: red;
+			display: flex;
+			flex-direction: rows;
+			flex-wrap: wrap;
+			justify-content: center;
+			row-gap: 10px;
+			column-gap: 15px;
+			margin-bottom: 30px;
+			button {
+				width: 90%;
+				max-width: 260px;
+				height: $btn-height;
+				border-radius: $radius;
+				cursor: pointer;
+				transition: background-color linear 400ms;
+			}
+			button:hover {
+				background-color: $tertiary;
+				color: $main-bg;
+			}
 		}
 	}
 }
 
 @import "footer";
-
-@media screen and (min-width: 465px) {
+@media screen and (min-height: 510px) {
+	header {
+		nav {
+			margin-right: 0;
+		}
+	}
+}
+@media screen and (min-height: 600px) {
 	main {
-		.panel-box {
-			width: 95%;
-			.content-box {
-				margin: auto;
-				width: 265px;
-				.info-box {
-					width: 260px;
-					display: flex;
-					flex-direction: column;
-					hgroup {
-						width: 260px;
-					}
-					.print-btn,
-					.close-btn {
-						width: $btn-width;
-						height: $btn-height;
-					}
-				}
+		height: 90%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-items: center;
+		align-items: center;
+
+		.panel-container {
+			div {
+				flex-direction: rows;
+
+				min-width: 540px;
 			}
 		}
+	}
+	footer {
+		bottom: 0;
+		position: absolute;
 	}
 }
 
 @media screen and (min-width: 1080px) {
 	main {
-		height: 85vh;
 		display: grid;
-		grid-template-columns: 50% 45% 3%;
-		.vector-box {
-			width: 100%;
-			height: 85vh;
+		grid-template-columns: repeat(2, 1fr);
+		.vector-container {
 			background-color: $alt-bg;
+			height: 100%;
 			display: flex;
-			flex-direction: column;
-			align-items: center;
+			flex-direction: rows;
+			flex-wrap: wrap;
+			align-content: center;
+			justify-content: center;
 			img {
-				visibility: visible;
-				width: 290px;
+				display: block;
 			}
-			.office-man {
-				margin-top: 25px;
-			}
-			.office-people {
-				margin-top: 25px;
+		}
+		.panel-container {
+			height: 94%;
+			h3 {
+				font-size: $h2;
+				text-align: left;
+				margin-bottom: 20px;
+				padding-bottom: 10px;
+				border-bottom: $border;
 			}
 		}
 	}

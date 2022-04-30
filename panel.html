@@ -49,31 +49,26 @@
 		</header>
 
 		<main id="main">
-			<div class="vector-box">
-				<img src="./img/office-man.svg" class="office-man" alt="Vector" />
-				<img src="./img/office-people.svg" class="office-people" alt="Vector" />
+			<div class="vector-container">
+				<img src="./img/office-man.svg" alt="vector" width="350" />
+				<img src="./img/office-people.svg" alt="vector" width="350" />
 			</div>
-			<div class="panel-box">
-				<h2>Hola, María</h2>
-				<div class="content-box">
-					<h2>Resumen</h2>
-					<div class="info-box">
-						<hgroup id="summary">
-							<h5 id="current-travels">Viajes creados: --</h5>
-							<h5 id="current-travel">Viaje actual: --</h5>
-							<h5 id="current-client">Cliente actual: --</h5>
-							<h5 id="current-raised">Recaudado: $--</h5>
-						</hgroup>
-						<button class="print-btn">Generar comprobante</button>
-						<button class="close-btn">Cerrar viaje</button>
-					</div>
+			<div class="panel-container">
+				<h3>Hola, María</h3>
+				<ul>
+					<li>Viajes creados: --</li>
+					<li>Viajes seleccionado: --</li>
+					<li>Cliente: --</li>
+					<li>Total a pagar: --</li>
+					<button>Imprimir comprobante</button>
+				</ul>
+
+				<div>
+					<button>Crear viaje</button>
+					<button>Seleccionar viaje</button>
+					<button>Cerrar viaje</button>
+					<button>Añadir cliente</button>
 				</div>
-			</div>
-			<div class="btn-box" id="buttons">
-				<span class="material-icons-outlined" id="add-travel"> post_add </span>
-				<span class="material-icons-outlined" id="list-travel"> list </span>
-				<span class="material-icons" id="add-client"> add_circle_outline </span>
-				<span class="material-icons" id="edit-client"> edit </span>
 			</div>
 		</main>
 		<footer>
