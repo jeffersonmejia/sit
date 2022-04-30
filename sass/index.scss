@@ -76,11 +76,18 @@ main {
 				caret-color: $secondary;
 			}
 
+<<<<<<< HEAD
 			// .usr-in:focus,
 			// .psw-in:focus {
 			// 	border-bottom: $border-focus;
 			// 	outline: none;
 			// }
+=======
+			.usr-in:focus,
+			.psw-in:focus {
+				border-bottom: $border-focus;
+			}
+>>>>>>> c3bdb74f3c5321e248788ee4070ba4abc398f3e9
 
 			.user-error,
 			.pass-error {
