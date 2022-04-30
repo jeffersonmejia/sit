@@ -23,6 +23,11 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid #ffffff;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   background-color: #f8f8f8;
   height: 100vh;

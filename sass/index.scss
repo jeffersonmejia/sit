@@ -1,6 +1,11 @@
 @import "variables";
 @import "reset";
 
+body {
+	display: flex;
+	flex-direction: column;
+}
+
 main {
 	background-color: $alt-bg;
 	height: 100vh;
