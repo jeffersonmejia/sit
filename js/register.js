@@ -164,5 +164,10 @@ form.addEventListener("submit", (e) => {
 	if (filled === true) {
 		alerts.submit.innerHTML = listAlert.submit;
 		alerts.submit.style.color = listColor.sucessful;
+		alerts.submit.style.visibility = "visible";
+		filled = false;
+		setTimeout(() => {
+			alerts.submit.style.visibility = "hidden";
+		}, 1000);
 	}
 });
