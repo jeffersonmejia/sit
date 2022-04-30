@@ -108,7 +108,6 @@ main .form-box form .psw-in {
 }
 main .form-box form .usr-in:focus,
 main .form-box form .psw-in:focus {
-  outline: none;
   border-bottom: 1px solid #000;
 }
 main .form-box form .user-error,
