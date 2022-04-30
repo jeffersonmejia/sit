@@ -58,6 +58,7 @@ body header nav .home {
   background-color: transparent;
   text-align: center;
   cursor: pointer;
+  transition: background-color ease-in 400ms;
 }
 body header nav .home a {
   text-decoration: none;

@@ -22,7 +22,7 @@ main {
 			min-width: fit-content;
 			width: 100%;
 
-			height: 420px;
+			height: 430px;
 			background-color: $main-bg;
 			display: flex;
 			flex-direction: column;
@@ -89,6 +89,7 @@ main {
 				font-weight: $regular;
 				margin-left: 25px;
 				margin-top: 5px;
+				margin-bottom: 5px;
 			}
 
 			.user-right,
@@ -98,6 +99,7 @@ main {
 				font-weight: $regular;
 				margin-left: 25px;
 				margin-top: 5px;
+				margin-bottom: 5px;
 			}
 			.submit-btn {
 				width: 87.9%;
@@ -140,45 +142,51 @@ main {
 @import "footer";
 
 @media only screen and (min-width: 1080px) {
-	main {
-		display: grid;
-		grid-template-columns: 50% 50%;
+	body {
+		main {
+			display: grid;
+			grid-template-columns: 50% 50%;
 
-		height: 100%;
-		.vector-box {
-			width: 100%;
-			height: 100%;
-			background-color: $main-bg;
+			height: 95%;
+			.vector-box {
+				width: 100%;
+				height: 100%;
+				background-color: $main-bg;
 
-			display: flex;
-			flex-direction: column;
+				display: flex;
+				flex-direction: column;
 
-			img {
-				display: block;
-				width: 350px;
-				align-self: center;
-				padding-top: 15px;
+				img {
+					display: block;
+					width: 350px;
+					align-self: center;
+					padding-top: 15px;
+				}
+
+				.office-man {
+					margin-top: 25px;
+				}
+				.office-people {
+					margin-top: 25px;
+				}
 			}
-
-			.office-man {
-				margin-top: 25px;
-			}
-			.office-people {
-				margin-top: 25px;
+			.form-box {
+				height: 94%;
+				padding: 0;
+				padding-right: 40px;
+				grid-column: 2/-1;
+				grid-row: 1/2;
+				display: flex;
+				flex-direction: rows;
+				justify-content: flex-end;
+				form {
+					align-self: center;
+				}
 			}
 		}
-		.form-box {
-			height: 94%;
-			padding: 0;
-			padding-right: 40px;
-			grid-column: 2/-1;
-			grid-row: 1/2;
-			display: flex;
-			flex-direction: rows;
-			justify-content: flex-end;
-			form {
-				align-self: center;
-			}
+		footer {
+			bottom: 0;
+			position: absolute;
 		}
 	}
 }

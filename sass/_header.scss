@@ -23,6 +23,7 @@ body {
 				background-color: transparent;
 				text-align: center;
 				cursor: pointer;
+				transition: background-color ease-in 400ms;
 				a {
 					text-decoration: none;
 					color: $main-bg;

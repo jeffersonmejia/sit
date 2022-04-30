@@ -91,7 +91,7 @@ main {
 			width: 80%;
 			height: $in-height;
 			align-self: center;
-			transition: background-color ease-in 700ms;
+			transition: background-color ease-in 400ms;
 		}
 		input[type="submit"]:hover {
 			background-color: $hover-btn;
@@ -150,6 +150,19 @@ main {
 					min-height: 83px;
 				}
 			}
+		}
+	}
+}
+@media screen and (min-width: 768px) and (min-height: 640px) {
+	body {
+		main {
+			height: 80%;
+			display: grid;
+			place-content: center;
+		}
+		footer {
+			bottom: 0;
+			position: absolute;
 		}
 	}
 }

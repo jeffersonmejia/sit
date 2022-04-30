@@ -37,7 +37,7 @@ const validateForm = (e) => {
 			// Borrar en deployment
 			if (e.target.name === "user" && e.target.value === "Invitado") {
 				userError.innerHTML = "";
-				userRight.innerHTML = "Acceso de invitado";
+				userRight.innerHTML = "Acceso garantizado";
 				guess.user = true;
 			} else if (e.target.name === "user" && e.target.value === "") {
 				userRight.innerHTML = "";
@@ -59,7 +59,7 @@ const validateForm = (e) => {
 			// Borrar en deployment
 			if (e.target.name === "pass" && e.target.value === "Invitado") {
 				passError.innerHTML = "";
-				passRight.innerHTML = "Acceso de invitado";
+				passRight.innerHTML = "Acceso garantizado";
 				guess.pass = true;
 			} else if (e.target.name === "pass" && e.target.value === "") {
 				passRight.innerHTML = "";
