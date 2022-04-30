@@ -106,11 +106,6 @@ main .form-box form .psw-in {
   border-bottom: 1px solid #adadad;
   caret-color: #ff477e;
 }
-main .form-box form .usr-in:focus,
-main .form-box form .psw-in:focus {
-  outline: none;
-  border-bottom: 1px solid #000;
-}
 main .form-box form .user-error,
 main .form-box form .pass-error {
   color: #ff0000;

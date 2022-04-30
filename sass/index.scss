@@ -76,11 +76,11 @@ main {
 				caret-color: $secondary;
 			}
 
-			.usr-in:focus,
-			.psw-in:focus {
-				outline: none;
-				border-bottom: $border-focus;
-			}
+			// .usr-in:focus,
+			// .psw-in:focus {
+			// 	border-bottom: $border-focus;
+			// 	outline: none;
+			// }
 
 			.user-error,
 			.pass-error {
