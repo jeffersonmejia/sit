@@ -23,6 +23,18 @@ body {
   height: 100%;
 }
 
+body::-webkit-scrollbar {
+  position: absolute;
+  width: 10px;
+  background-color: #e6e6e6;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff8bac;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+}
+
 main {
   background-color: #f8f8f8;
   height: 100vh;
@@ -149,13 +161,10 @@ main .form-box form .register:hover {
 footer {
   background-color: #ff477e;
   width: 100%;
-  min-height: fit-content;
   max-height: 40px;
   height: 40px;
   display: grid;
   place-items: center;
-  position: absolute;
-  bottom: 0;
 }
 footer h6 {
   font-family: "Raleway", sans-serif;

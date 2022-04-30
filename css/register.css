@@ -23,6 +23,18 @@ body {
   height: 100%;
 }
 
+body::-webkit-scrollbar {
+  position: absolute;
+  width: 10px;
+  background-color: #e6e6e6;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff8bac;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+}
+
 body header {
   display: flex;
   flex-direction: column;
@@ -30,10 +42,9 @@ body header {
   justify-content: baseline;
   position: fixed;
   width: 100%;
-  margin-right: 15px;
 }
 body header nav {
-  margin-right: 1px;
+  margin-right: 20px;
   width: 100%;
   height: 50px;
   background-color: #ff477e;
@@ -123,23 +134,6 @@ body main {
     width: 182px;
   }
 }
-body::-webkit-scrollbar {
-  position: absolute;
-  width: 10px;
-  background-color: #e6e6e6;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #ff8bac;
-  border-radius: 50px;
-  margin-right: 10px;
-  padding-right: 10px;
-  border-right: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
-  border-left: 1px solid #ffffff;
-}
-
 main {
   padding-top: 15px;
   margin-bottom: 90px;
@@ -148,19 +142,28 @@ main form {
   width: 90vw;
   height: 100%;
   margin: auto;
-  margin-bottom: 20px;
-  padding-bottom: 30px;
   margin-top: 20px;
+  padding-bottom: 15px;
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-main form .group-1,
-main form .group-2 {
   display: flex;
   flex-direction: column;
 }
-main form .group-1 .alert,
-main form .group-2 .alert {
+main form .title {
+  font-size: 16px;
+  text-align: center;
+  color: #ff477e;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+main form .group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  width: 100%;
+}
+main form .group .alert {
   width: fit-content;
   color: #000;
   margin-top: 5px;
@@ -168,39 +171,24 @@ main form .group-2 .alert {
   font-size: 11px;
   font-weight: normal;
 }
-main form .title {
-  font-size: 16px;
-  text-align: center;
-  color: #ff477e;
-  text-transform: uppercase;
-  margin-top: 20px;
-  padding-top: 20px;
-}
-main form .label-top {
-  margin-top: 30px;
-}
-main form label {
+main form .group label {
   font-size: 13px;
   margin-left: 20px;
   width: 100%;
 }
-main form label:not(.label-top) {
-  margin-top: 20px;
-}
-main form input:not(input[type=checkbox]) {
-  width: 80%;
+main form .group input:not(input[type=checkbox]) {
+  width: 85%;
   height: 50px;
   font-size: 11px;
-  margin-left: 30px;
-  padding-left: 10px;
+  margin-left: 20px;
 }
-main form input[type=text]:focus,
-main form input[type=tel]:focus {
+main form .group input[type=text]:focus,
+main form .group input[type=tel]:focus {
   outline: none;
   border-bottom: 1px solid #000;
 }
-main form input[type=text],
-main form input[type=tel] {
+main form .group input[type=text],
+main form .group input[type=tel] {
   border: none;
   border-bottom: 1px solid #adadad;
 }
@@ -216,6 +204,7 @@ main form .aux-container .conditions {
   width: fit-content;
   margin-left: 0;
   padding-left: 2px;
+  font-size: 13px;
 }
 main form .aux-container input {
   margin-left: 30px;
@@ -228,25 +217,31 @@ main form input[type=submit] {
   color: #ffffff;
   margin-top: 20px;
   border-radius: 5px;
+  width: 80%;
+  height: 50px;
+  align-self: center;
+  transition: background-color ease-in 700ms;
 }
-main form .alert {
+main form input[type=submit]:hover {
+  background-color: #ff6c96;
+}
+main form .alert-submit {
   width: fit-content;
   color: #000;
   margin-top: 15px;
   font-size: 11px;
   font-weight: normal;
+  visibility: hidden;
+  align-self: center;
 }
 
 footer {
   background-color: #ff477e;
   width: 100%;
-  min-height: fit-content;
   max-height: 40px;
   height: 40px;
   display: grid;
   place-items: center;
-  position: absolute;
-  bottom: 0;
 }
 footer h6 {
   font-family: "Raleway", sans-serif;
@@ -257,47 +252,40 @@ footer h6 {
   word-wrap: break-word;
 }
 
-@media screen and (min-width: 768px) {
-  main {
-    margin: 0;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
+@media screen and (min-width: 500px) {
   main form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: fit-content repeat(2, 1fr);
-    max-width: 691px;
+    max-width: 450px;
   }
-  main form .title {
-    grid-column: 1/3;
-  }
-  main form .label-top {
-    margin-top: 0;
-  }
-  main form .group-1 label,
-main form .group-2 label {
-    margin-top: 20px;
-  }
-  main form .aux-container {
-    grid-column: 1/3;
-    text-align: center;
-  }
-  main form .aux-container .conditions {
-    text-align: center;
-  }
-  main form .submit {
-    align-self: center;
-    justify-self: center;
-    grid-column: 1/3;
-    max-width: 260px;
-    background-color: red;
+  main form input[type=submit] {
+    max-width: 300px;
   }
 }
-@media screen and (min-height: 768px) {
-  footer {
-    bottom: 0;
-    position: relative;
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  body header nav {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-right: 0;
+  }
+  body main {
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+  body main form {
+    max-width: 768px;
+    height: fit-content;
+    align-items: center;
+  }
+  body main form .group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body main form .group-in {
+    display: flex;
+    flex-direction: column;
+    min-height: 83px;
   }
 }
 
