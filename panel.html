@@ -31,16 +31,14 @@
 		<link rel="stylesheet" href="./css/panel.css" />
 	</head>
 	<body>
-		<header id="header">
+		<header>
 			<nav>
 				<button class="home"><a href="./index.html">Inicio</a></button>
 
-				<span class="material-icons-round account" id="account-icon">
-					account_circle
-				</span>
+				<span class="material-icons-round account"> account_circle </span>
 			</nav>
 			<div class="container">
-				<div class="account-box" id="account-box">
+				<div class="account-box">
 					<ul>
 						<li><a href="./index.html">Cerrar sesión</a></li>
 					</ul>
@@ -48,7 +46,7 @@
 			</div>
 		</header>
 
-		<main id="main">
+		<main>
 			<div class="vector-container">
 				<img src="./img/office-man.svg" alt="vector" width="350" />
 				<img src="./img/office-people.svg" alt="vector" width="350" />
@@ -63,17 +61,17 @@
 					<button>Imprimir comprobante</button>
 				</ul>
 
-				<div>
-					<button>Crear viaje</button>
+				<div id="panel-button">
+					<button id="create"><a href="#modal">Crear viaje</a></button>
 					<button>Seleccionar viaje</button>
 					<button>Cerrar viaje</button>
 					<button>Añadir cliente</button>
 				</div>
 			</div>
 		</main>
-		<div class="modal-container">
-			<form action="">
-				<span><a href="#main">X</a></span>
+		<div class="modal-container" id="modal">
+			<form action="" method="POST">
+				<span><a href="">X</a></span>
 				<h3>Titulo</h3>
 				<label>Opcion</label>
 				<input type="text" placeholder="Placeholder" />

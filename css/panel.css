@@ -192,6 +192,11 @@ main .panel-container div button {
   cursor: pointer;
   transition: background-color linear 400ms;
 }
+main .panel-container div button a {
+  text-decoration: none;
+  color: #000;
+  width: max-content;
+}
 main .panel-container div button:hover {
   background-color: #ff8bac;
   color: #ffffff;
@@ -208,6 +213,7 @@ main .panel-container div button:hover {
   top: 0;
   align-items: center;
   justify-content: center;
+  visibility: hidden;
 }
 .modal-container form {
   max-width: 430px;

@@ -74,6 +74,11 @@ main {
 				border-radius: $radius;
 				cursor: pointer;
 				transition: background-color linear 400ms;
+				a {
+					text-decoration: none;
+					color: $content;
+					width: max-content;
+				}
 			}
 			button:hover {
 				background-color: $tertiary;
@@ -93,6 +98,7 @@ main {
 	top: 0;
 	align-items: center;
 	justify-content: center;
+	visibility: hidden;
 
 	form {
 		max-width: 430px;

@@ -1,20 +1,23 @@
-const account = document.getElementById("account-box");
-const accountBtn = document.getElementById("account-icon");
-const blockDisplay = document.getElementById("block-display");
-const buttons = document.getElementById("buttons");
+const buttons = document.querySelectorAll("#panel-button button");
+const modal = document.getElementById("modal");
 
-//DATA SUMMARY
-let clicked = false;
-
-accountBtn.addEventListener("click", () => {
-	if (clicked === false) {
-		clicked = true;
-		account.style.visibility = "visible";
-	} else if (clicked === true) {
-		clicked = false;
-		account.style.visibility = "hidden";
+const setButton = (element) => {
+	switch (element.target.id) {
+		case "create": {
+			console.log("it works");
+			break;
+		}
 	}
-	console.log("listening event");
+};
+
+buttons.forEach((element) => {
+	element.addEventListener("click", (e) => {
+		e.preventDefault();
+		modal.style.visibility = "visible";
+		setButton(e);
+	});
 });
 
-console.log("hola");
+// modal.addEventListener("click", (e) => {
+// 	e.preventDefault();
+// });
