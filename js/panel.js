@@ -5,6 +5,7 @@ const footer = document.getElementById("footer");
 //MODAL ELEMENTS
 const modalEl = {
 	modal: document.getElementById("modal"),
+	contain: document.querySelector("#modal form"),
 	close: document.querySelector("#modal span a"),
 	title: document.querySelector("#modal h3"),
 	label: document.querySelectorAll("#modal label"),
@@ -201,7 +202,8 @@ const setButton = (element) => {
 //TO APPEAR MODAL
 buttons.forEach((element) => {
 	element.addEventListener("click", (e) => {
-		modal.style.visibility = "visible";
+		modalEl.modal.style.visibility = "visible";
+		modalEl.contain.style.transform = "translateY(0)";
 		footer.style.position = "initial";
 		setButton(e);
 	});
@@ -222,4 +224,5 @@ modalEl.modal.addEventListener("submit", (e) => {
 modalEl.close.addEventListener("click", () => {
 	modalEl.modal.style.visibility = "hidden";
 	footer.style.position = "absolute";
+	modalEl.contain.style.transform = "translateY(-200%)";
 });

@@ -222,8 +222,10 @@ main .panel-container div button:hover {
   row-gap: 10px;
   border-radius: 5px;
   position: relative;
-  transition: transform ease-in 1s;
-  transform: translateY(0);
+  transition-property: transform;
+  transition-timing-function: ease-in;
+  transition-duration: 700ms;
+  transform: translateY(-200%);
 }
 .modal-container form h3 {
   width: 100%;
