@@ -1,7 +1,7 @@
 # SIT
 
 Travel Information System
-Developed width HTML, SASS and JS
+Developed with HTML, SASS and JS
 
 # Develop
 
