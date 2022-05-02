@@ -1,6 +1,9 @@
 const buttons = document.querySelectorAll("#panel-button button");
+const footer = document.getElementById("footer");
+console.log(footer);
 const modalEl = {
 	modal: document.getElementById("modal"),
+	close: document.querySelector("#modal span a"),
 	title: document.querySelector("#modal h3"),
 	label: document.querySelectorAll("#modal label"),
 	input: document.querySelectorAll("#modal input"),
@@ -21,7 +24,10 @@ let config = {
 			third: "Ingrese el chofer",
 		},
 		submit: "Crear",
-		alert: "Viaje creado éxitosamente",
+		alert: {
+			successfull: "Viaje creado éxitosamente",
+			unsuccessful: "Aún quedan campos por llenar",
+		},
 	},
 };
 
@@ -80,6 +86,7 @@ const setButton = (element) => {
 buttons.forEach((element) => {
 	element.addEventListener("click", (e) => {
 		modal.style.visibility = "visible";
+		footer.style.position = "initial";
 		setButton(e);
 	});
 });
@@ -87,10 +94,15 @@ buttons.forEach((element) => {
 modalEl.modal.addEventListener("submit", (e) => {
 	e.preventDefault();
 	modalEl.alert.style.color = listColor.sucessful;
-	modalEl.alert.innerHTML = config.create.alert;
+	modalEl.alert.innerHTML = config.create.alert.successfull;
 	modalEl.alert.style.visibility = "visible";
 	setTimeout(() => {
 		modalEl.modal.style.visibility = "hidden";
 		modalEl.alert.style.visibility = "hidden";
-	}, 3000);
+		footer.style.position = "absolute";
+	}, 1500);
+});
+
+modalEl.close.addEventListener("click", () => {
+	modalEl.modal.style.visibility = "hidden";
 });
